@@ -25,6 +25,11 @@
 ;;; crafted-defaults - the General Crafted Emacs endorsed defaults
 (require 'crafted-defaults-config)
 
+;;; crafted-ui module
+(require 'crafted-ui-packages)
+(package-install-selected-packages :noconfirm)
+(require 'crafted-completion-config)
+
 ;;; crafted-completion module
 (require 'crafted-completion-packages)
 (package-install-selected-packages :noconfirm)
