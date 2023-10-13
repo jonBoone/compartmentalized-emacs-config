@@ -39,4 +39,8 @@
 (setq crafted-package-installer #'straight-use-package)
 (setq crafted-package-installed-predicate #'straight--installed-p)
 
-;;; crafted-early-init-straight.el ends here
+(provide 'crafted-early-init-straight)
+;; END crafted-early-init-straight.el
+;;
+
+;; crafted-early-init-straight.el ends here

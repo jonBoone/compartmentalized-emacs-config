@@ -54,5 +54,9 @@
 (load (expand-file-name "modules/crafted-early-init-config"
                         crafted-emacs-home))
 
-
 (provide 'early-init)
+
+;; END early-init.el
+;;
+
+;; early-init.el ends here

@@ -46,3 +46,10 @@
 (require 'crafted-lisp-packages)
 (package-install-selected-packages :noconfirm)
 (require 'crafted-lisp-config)
+
+(provide 'init)
+
+;; END init.el
+;;
+
+;; init.el ends here
