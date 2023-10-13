@@ -11,7 +11,7 @@
 ;;
 ;; For use in early-init.el!
 
-;; minimize gc runs
+;; minimize gc runs during loading (and possibly updating) config
 (setq gc-cons-threshold (* 200 1024 1024))
 
 ;; disable package.el in favor of straight.el
@@ -30,9 +30,21 @@
 (push '(tool-bar-lines . 0) default-frame-alist)
 (push '(vertical-scroll-bars . 0) default-frame-alist)
 
+;; native compiler support
+(message (concat
+          "Native compilation is "
+          (if (and (fboundp 'native-comp-available-p) (native-comp-available-p))
+              (progn
+                ;; (setq comp-deferred-compilation t)
+                "")
+            ("*not* "))
+          "available"))
+
 ;; load the straight support module
 (setq crafted-emacs-home "~/.config/emacs/crafted-emacs")
 (load (expand-file-name "custom-modules/crafted-early-init-straight"
 			user-emacs-directory))
 (load (expand-file-name "modules/crafted-early-init-config"
                         crafted-emacs-home))
+
+(provide 'early-init)
