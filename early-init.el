@@ -40,11 +40,19 @@
             ("*not* "))
           "available"))
 
+
+;;; cl-lib - for 'cl-remove
+(require 'cl-lib)
+
+;; ensure we don't use the included version of org-mode
+(setq load-path (cl-remove "org$" load-path :test 'string-match-p))
+
 ;; load the straight support module
 (setq crafted-emacs-home "~/.config/emacs/crafted-emacs")
 (load (expand-file-name "custom-modules/crafted-early-init-straight"
 			user-emacs-directory))
 (load (expand-file-name "modules/crafted-early-init-config"
                         crafted-emacs-home))
+
 
 (provide 'early-init)
