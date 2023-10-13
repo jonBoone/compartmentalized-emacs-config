@@ -17,6 +17,12 @@
 (unless (assoc-default "nongnu" package-archives)
   (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t))
 
+(customize-set-variable 'package-archive-priorities
+			'(("gnu"      . 90)      ; highest spot
+			  ("nongnu"   . 80)      ; second spot
+			  ("melpa"    . 70)      ;
+			  ))
+
 ;; leverage 'use-package to setup straight!
 (use-package straight
   :custom
