@@ -26,6 +26,7 @@
  '(marginalia-annotators
    '(marginalia-annotators-heavy marginalia-annotators-light nil) t)
  '(mouse-wheel-progressive-speed nil)
+ '(scheme-program-name "guile" t)
  '(scroll-conservatively 101)
  '(scroll-margin 0)
  '(scroll-preserve-screen-position t)
