@@ -10,6 +10,9 @@
 ;; eliminate having to type out "yes" and "no"
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; choose utf-8 as the default coding system
+(set-default-coding-systems 'utf-8)
+
 ;; my/display-startup-time function 
 (defun my/display-startup-time ()
   (message "Emacs loaded in %s with %d garbage collections."
