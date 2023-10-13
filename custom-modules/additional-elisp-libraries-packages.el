@@ -10,19 +10,19 @@
 ;;; Code:
 
 ;; comment tags highlighting and listing capabilities
-(add-to-list 'package-selected-packages comment-tags)
+(add-to-list 'package-selected-packages 'comment-tags)
 
 ;; modern list libary
-(add-to-list 'package-selected-packages dash)
+(add-to-list 'package-selected-packages 'dash)
 
 ;; hash table library
-(add-to-list 'package-selected-packages ht)
+(add-to-list 'package-selected-packages 'ht)
 
 ;; string-manipulation library
-(add-to-list 'package-selected-packages s)
+(add-to-list 'package-selected-packages 's)
 
 ;; timestamp and date library
-(add-to-list 'package-selected-packages ts)
+(add-to-list 'package-selected-packages 'ts)
 
 (provide 'additional-elisp-libraries-packages)
 ;; END additional-elisp-libraries-packages.el
