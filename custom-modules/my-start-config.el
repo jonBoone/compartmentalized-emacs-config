@@ -7,6 +7,9 @@
 
 ;;; Commentary:
 
+;; eliminate having to type out "yes" and "no"
+(fset 'yes-or-no-p 'y-or-n-p)
+
 ;; my/display-startup-time function 
 (defun my/display-startup-time ()
   (message "Emacs loaded in %s with %d garbage collections."
