@@ -19,6 +19,9 @@
 ;;; leverage my-start-config
 (require 'my-start-config)
 
+;;; leverage my-font-config
+(require 'my-font-config)
+
 ;;; leverage performance-optimization module
 (require 'optimized-performance-packages)
 (crafted-package-install-selected-packages)
