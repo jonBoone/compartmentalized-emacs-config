@@ -35,7 +35,7 @@
           "Native compilation is "
           (if (and (fboundp 'native-comp-available-p) (native-comp-available-p))
               (progn
-                ;; (setq comp-deferred-compilation t)
+                (setq comp-deferred-compilation t)
                 "")
             ("*not* "))
           "available"))
@@ -47,12 +47,16 @@
 ;; ensure we don't use the included version of org-mode
 (setq load-path (cl-remove "org$" load-path :test 'string-match-p))
 
-;; load the straight support module
+;; load the straight support module and dependencies
 (setq crafted-emacs-home "~/.config/emacs/crafted-emacs")
 (load (expand-file-name "custom-modules/crafted-early-init-straight"
 			user-emacs-directory))
-(load (expand-file-name "modules/crafted-early-init-config"
-                        crafted-emacs-home))
+(require 'crafted-package-config)
+(require 'custom-straight-packages)
+(crafted-package-install-selected-packages :noconfirm)
+(require 'custom-straight-config)
+;; (load (expand-file-name "custom-modules/custom-straight-config"
+;;                        user-emacs-directory))
 
 (provide 'early-init)
 
