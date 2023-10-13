@@ -1,6 +1,5 @@
 # Compiled
 *.elc
-*.eln
 
 # Packaging
 .cask
@@ -16,3 +15,6 @@
 
 # elpa artifacts
 elpa/
+
+# eln-cache
+/eln-cache/
