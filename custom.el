@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(Man-notify-method 'aggressive t)
- '(bookmark-save-flag 1 t)
+ '(bookmark-save-flag 1)
  '(completion-category-overrides '((file (styles partial-completion))))
  '(completion-cycle-threshold 3)
  '(completion-styles '(orderless basic))
@@ -19,8 +19,8 @@
  '(eshell-scroll-to-bottom-on-input 'this t)
  '(fast-but-imprecise-scrolling t)
  '(global-auto-revert-non-file-buffers t)
- '(ibuffer-movement-cycle nil t)
- '(ibuffer-old-time 24 t)
+ '(ibuffer-movement-cycle nil)
+ '(ibuffer-old-time 24)
  '(inferior-lisp-program "sbcl")
  '(kill-do-not-save-duplicates t)
  '(load-prefer-newer t t)
@@ -32,7 +32,7 @@
      ("nongnu" . 80)
      ("stable" . 70)
      ("melpa" . 0)))
- '(scheme-program-name "guile")
+ '(scheme-program-name "guile" t)
  '(scroll-conservatively 101)
  '(scroll-margin 0)
  '(scroll-preserve-screen-position t)
