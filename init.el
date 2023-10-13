@@ -18,6 +18,10 @@
 (load (expand-file-name "modules/crafted-init-config"
 			crafted-emacs-home))
 
+;; leverage the General Crafted Emacs endorsed defaults
+(require 'crafted-defaults-config)
+
+
 ;; add package definitions for completion packages
 ;; to 'package-selected-packages'.
 (require 'crafted-completion-packages)
@@ -27,3 +31,4 @@
 
 ;; load configuration for the completion module
 (require 'crafted-completion-config)
+
