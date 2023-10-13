@@ -7,35 +7,35 @@
 
 ;;; Commentary:
 
-;; configure support for custom.el
+
+;;; custom.el support
 (setq custom-file (expand-file-name "custom.el"
 				    user-emacs-directory))
 (when (and custom-file
 	   (file-exists-p custom-file))
   (load custom-file nil :nomessage))
 
-;; For now, we will begin by using crafted-init-config module
+
+;;; crafted-emacs modules
+
+;;; crafted-init-config
 (load (expand-file-name "modules/crafted-init-config"
 			crafted-emacs-home))
 
-;; leverage the General Crafted Emacs endorsed defaults
+;;; crafted-defaults - the General Crafted Emacs endorsed defaults
 (require 'crafted-defaults-config)
 
-
-;; add package definitions for completion packages
+;;; crafted-completion module
 (require 'crafted-completion-packages)
-
-;; install selected packages
 (package-install-selected-packages :noconfirm)
-
-;; load configuration for the completion module
 (require 'crafted-completion-config)
 
-;; add package definitions for ide packages
+;;; crafted-idea module
 (require 'crafted-ide-packages)
-
-;; install selected packages
 (package-install-selected-packages :noconfirm)
-
-;; load configuration for the ide module
 (require 'crafted-ide-config)
+
+;;; crafted-lisp module
+(require 'crafted-lisp-packages)
+(package-install-selected-packages :noconfirm)
+(require 'crafted-lisp-config)
