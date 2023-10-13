@@ -21,3 +21,12 @@
   (straight-register-package 'org)
   (straight-register-package 'org-contrib))
 
+;; include diminsh
+(use-package diminish
+  :straight t)
+
+(provide 'custom-straight-config)
+;; END custom-straight-config.el
+;;
+
+;; custom-straight-config.el ends here
