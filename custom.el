@@ -27,11 +27,6 @@
  '(marginalia-annotators
    '(marginalia-annotators-heavy marginalia-annotators-light nil) t)
  '(mouse-wheel-progressive-speed nil)
- '(package-archive-priorities
-   '(("gnu" . 99)
-     ("nongnu" . 80)
-     ("stable" . 70)
-     ("melpa" . 0)))
  '(scheme-program-name "guile" t)
  '(scroll-conservatively 101)
  '(scroll-margin 0)
