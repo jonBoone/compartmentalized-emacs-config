@@ -1,5 +1,6 @@
 # Compiled
 *.elc
+*.eln
 
 # Packaging
 .cask
@@ -11,7 +12,7 @@
 *.~undo-tree
 
 # straight.el artifacts
-straight/
+/straight/
 
 # elpa artifacts
 elpa/
