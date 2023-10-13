@@ -22,6 +22,10 @@
 ;;; leverage my-font-config
 (require 'my-font-config)
 
+;; additional elisp libraries
+(require 'additional-elisp-libraries-packages)
+(crafted-package-install-selected-packages)
+
 ;;; leverage performance-optimization module
 (require 'optimized-performance-packages)
 (crafted-package-install-selected-packages)
