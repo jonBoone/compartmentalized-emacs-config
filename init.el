@@ -14,7 +14,8 @@
 	   (file-exists-p custom-file))
   (load custom-file nil :nomessage))
 
-;;; crafted-emacs modules
+;;; modules
+(require 'my-start-config)
 
 ;;; crafted-init-config
 (require 'crafted-init-config)
