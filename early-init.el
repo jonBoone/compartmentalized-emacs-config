@@ -34,3 +34,5 @@
 (setq crafted-emacs-home "~/.config/emacs/crafted-emacs")
 (load (expand-file-name "custom-modules/crafted-early-init-straight"
 			user-emacs-directory))
+(load (expand-file-name "modules/crafted-early-init-config"
+                        crafted-emacs-home))
