@@ -23,7 +23,6 @@
 
 
 ;; add package definitions for completion packages
-;; to 'package-selected-packages'.
 (require 'crafted-completion-packages)
 
 ;; install selected packages
@@ -32,3 +31,11 @@
 ;; load configuration for the completion module
 (require 'crafted-completion-config)
 
+;; add package definitions for ide packages
+(require 'crafted-ide-packages)
+
+;; install selected packages
+(package-install-selected-packages :noconfirm)
+
+;; load configuration for the ide module
+(require 'crafted-ide-config)
