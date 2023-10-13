@@ -1,4 +1,4 @@
-;;; my-config.el --- personal configuration  -*- lexical-binding: t; -*-
+;;; my-start-config.el --- personal configuration  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023
 ;; SPDX-License-Identifier: MIT
@@ -46,17 +46,6 @@
   (declare (indent defun))
   `(when (eq system-type ',type)
      ,@body))
-
-;; setup default font sizes
-(defvar my/default-font-size nil)
-(defvar my/default-variable-font-size nil)
-
-(my/with-system darwin
-                (setq my/default-font-size          160
-                      my/default-variable-font-size 160))
-(my/with-system gnu/linux
-                (setq my/default-font-size          240
-                      my/default-variable-font-size 240))
 
 ;; frame transparency setting
 (defvar my/frame-transparency '(90 . 90))
