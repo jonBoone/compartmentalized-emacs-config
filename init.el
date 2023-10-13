@@ -7,6 +7,9 @@
 
 ;;; Commentary:
 
+;;; setup =user-init-file= and =user-emacs-directory= are properly set
+(setq user-init-file (or load-file-name (buffer-file-name)))
+(setq user-emacs-directory (file-name-directory user-init-file))
 
 ;;; custom.el support
 (setq custom-file (expand-file-name "custom.el"
@@ -14,7 +17,6 @@
 (when (and custom-file
 	   (file-exists-p custom-file))
   (load custom-file nil :nomessage))
-
 
 ;;; crafted-emacs modules
 
