@@ -30,7 +30,7 @@
 (push '(tool-bar-lines . 0) default-frame-alist)
 (push '(vertical-scroll-bars . 0) default-frame-alist)
 
-
+;; load the straight support module
 (setq crafted-emacs-home "~/.config/emacs/crafted-emacs")
 (load (expand-file-name "custom-modules/crafted-early-init-straight"
 			user-emacs-directory))
