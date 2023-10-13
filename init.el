@@ -14,8 +14,15 @@
 	   (file-exists-p custom-file))
   (load custom-file nil :nomessage))
 
-;;; modules
+;;;; modules
+
+;;; leverage my-start-config
 (require 'my-start-config)
+
+;;; leverage performance-optimization module
+(require 'optimized-performance-packages)
+(crafted-package-install-selected-packages)
+(require 'optimized-performance-config)
 
 ;;; crafted-init-config
 (require 'crafted-init-config)
