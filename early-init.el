@@ -37,7 +37,7 @@
               (progn
                 (setq comp-deferred-compilation t)
                 "")
-            ("*not* "))
+            "*not* ")
           "available"))
 
 
