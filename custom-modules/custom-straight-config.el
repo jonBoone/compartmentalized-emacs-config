@@ -6,10 +6,16 @@
 ;; Author: Jon Boone
 
 ;;; Commentary:
+
 ;; I want configure use-package to leverage straight
 (setq use-package-always-ensure nil    ; avoid forcing the use of package.el
-      use-package-verbose       'debug
-      )
+      use-package-verbose       'debug)
+
+;; add package sources if they are not already present
+(unless (assoc-default "melpa" package-archives)
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t))
+(unless (assoc-default "nongnu" package-archives)
+  (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t))
 
 ;; leverage 'use-package to setup straight!
 (use-package straight
