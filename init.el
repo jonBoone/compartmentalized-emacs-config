@@ -28,7 +28,7 @@
 ;;; crafted-ui module
 (require 'crafted-ui-packages)
 (package-install-selected-packages :noconfirm)
-(require 'crafted-completion-config)
+(require 'crafted-ui-config)
 
 ;;; crafted-completion module
 (require 'crafted-completion-packages)
