@@ -102,8 +102,8 @@
   (add-to-list 'global-mode-string 'my/count-words-buffer t))
 
 
-(provide 'my-config)
-;; END my-config.el
+(provide 'my-start-config)
+;; END my-start-config.el
 ;;
 
-;; my-config.el ends here
+;; my-start-config.el ends here
