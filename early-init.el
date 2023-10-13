@@ -60,8 +60,6 @@
 (require 'custom-straight-packages)
 (crafted-package-install-selected-packages)
 (require 'custom-straight-config)
-;; (load (expand-file-name "custom-modules/custom-straight-config"
-;;                        user-emacs-directory))
 
 (provide 'early-init)
 

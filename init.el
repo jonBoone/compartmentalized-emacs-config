@@ -18,30 +18,28 @@
 
 ;;; crafted-init-config
 (require 'crafted-init-config)
-;(load (expand-file-name "modules/crafted-init-config"
-;			crafted-emacs-home))
 
 ;;; crafted-defaults - the General Crafted Emacs endorsed defaults
 (require 'crafted-defaults-config)
 
 ;;; crafted-ui module
 (require 'crafted-ui-packages)
-(package-install-selected-packages :noconfirm)
+(crafted-package-install-selected-packages)
 (require 'crafted-ui-config)
 
 ;;; crafted-completion module
 (require 'crafted-completion-packages)
-(package-install-selected-packages :noconfirm)
+(crafted-package-install-selected-packages)
 (require 'crafted-completion-config)
 
 ;;; crafted-idea module
 (require 'crafted-ide-packages)
-(package-install-selected-packages :noconfirm)
+(crafted-package-install-selected-packages)
 (require 'crafted-ide-config)
 
 ;;; crafted-lisp module
 (require 'crafted-lisp-packages)
-(package-install-selected-packages :noconfirm)
+(crafted-package-install-selected-packages)
 (require 'crafted-lisp-config)
 
 (provide 'init)
