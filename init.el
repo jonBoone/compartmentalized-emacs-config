@@ -34,6 +34,11 @@
 ;;; crafted-init-config
 (require 'crafted-init-config)
 
+;; keybinding libraries module
+(require 'keybinding-libraries-packages)
+(crafted-package-install-selected-packages)
+(require 'keybinding-libraries-config)
+
 ;;; crafted-defaults - the General Crafted Emacs endorsed defaults
 (require 'crafted-defaults-config)
 
