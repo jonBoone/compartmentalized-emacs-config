@@ -75,7 +75,6 @@
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize)))
 
-
 (provide 'my-start-config)
 ;; END my-start-config.el
 ;;
