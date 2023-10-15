@@ -49,6 +49,11 @@
 (crafted-package-install-selected-packages)
 (require 'crafted-ui-config)
 
+;;; custom-ui-mode
+(require 'custom-ui-packages)
+(crafted-package-install-selected-packages)
+(require 'custom-ui-config)
+
 ;;; crafted-completion module
 (require 'crafted-completion-packages)
 (crafted-package-install-selected-packages)
