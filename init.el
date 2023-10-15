@@ -27,6 +27,7 @@
 ;; additional elisp libraries
 (require 'additional-elisp-libraries-packages)
 (crafted-package-install-selected-packages)
+(require 'additional-elisp-libraries-config)
 
 ;;; leverage performance-optimization module
 (require 'optimized-performance-packages)
