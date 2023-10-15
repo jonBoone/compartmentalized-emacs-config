@@ -100,9 +100,7 @@
 (use-package exec-path-from-shell
   :straight t
   :init
-  (setq exec-path-from-shell-check-startup-files nil
-        exec-path-from-shell-shell-name          "/bin/zsh"
-        exec-path-from-shell-variables           '("GOPATH" "LANG" "MANPATH" "PATH"))
+  (setq exec-path-from-shell-check-startup-files nil)
   :config
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize)))
