@@ -66,37 +66,6 @@
         visual-fill-column-center-text t)
   (visual-fill-column-mode 1))
 
-;; setup a process for counting words in a buffer
-(defun my/count-words-buffer ()
-  "Count the number of words in the current buffer."
-  (interactive)
-  (save-excursion
-    (goto-char (point-min))
-    (let ((count 0))
-      (while (not (eobp))
-        (forward-word 1)
-        (setq count (1+ count)))
-      count)))
-  
-(defvar count-words-buffer nil
-  "*Number of words in the buffer.")
-
-(defun my/update-wc ()
-  (interactive)
-  (setq count-words-buffer (number-to-string (my/count-words-buffer)))
-  (force-mode-line-update))
-
-(unless count-words-buffer
-  ;; seed count-words-paragraph
-  ;; create timer to keep count-words-paragraph updated
-  (run-with-idle-timer 1 t 'my/update-wc))
-
-;; add count words paragraph to the mode line-mode
-(unless (memq 'count-words-buffer global-mode-string)
-  (add-to-list 'global-mode-string "words: " t)
-  (add-to-list 'global-mode-string 'my/count-words-buffer t))
-
-
 (provide 'my-start-config)
 ;; END my-start-config.el
 ;;
