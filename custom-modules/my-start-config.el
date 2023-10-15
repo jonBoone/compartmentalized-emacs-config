@@ -96,15 +96,6 @@
   (add-to-list 'global-mode-string "words: " t)
   (add-to-list 'global-mode-string 'my/count-words-buffer t))
 
-;; capture the environment variables
-(use-package exec-path-from-shell
-  :straight t
-  :init
-  (setq exec-path-from-shell-check-startup-files nil)
-  :config
-  (when (memq window-system '(mac ns x))
-    (exec-path-from-shell-initialize)))
-
 
 (provide 'my-start-config)
 ;; END my-start-config.el
