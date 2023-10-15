@@ -66,6 +66,16 @@
         visual-fill-column-center-text t)
   (visual-fill-column-mode 1))
 
+;; capture the environment variables
+(use-package exec-path-from-shell
+  :straight t
+  :init
+  (setq exec-path-from-shell-check-startup-files nil)
+  :config
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize)))
+
+
 (provide 'my-start-config)
 ;; END my-start-config.el
 ;;
