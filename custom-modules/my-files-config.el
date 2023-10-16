@@ -83,6 +83,8 @@
 (use-package dired-ranger
   :defer t)
 
+;; setup tramp default
+(setq tramp-default-method "ssh")
 
 (provide 'my-files-config)
 ;; END my-files-config.el
