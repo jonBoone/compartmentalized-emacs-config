@@ -16,12 +16,12 @@
 
 ;;;; modules
 
-;;; leverage my-start-config
+;;; leverage my-start module
 (require 'my-start-packages)
 (crafted-package-install-selected-packages)
 (require 'my-start-config)
 
-;;; leverage my-font-config
+;;; leverage my-font module
 (require 'my-font-packages)
 (crafted-package-install-selected-packages)
 (require 'my-font-config)
@@ -44,11 +44,16 @@
 (crafted-package-install-selected-packages)
 (require 'keybinding-libraries-config)
 
-;;; my defaults
+;;; leverage my-defaults module
 (require 'my-defaults-config)
 
 ;;; crafted-defaults - the General Crafted Emacs endorsed defaults
 (require 'crafted-defaults-config)
+
+;;; leverage my-files module
+(require 'my-files-packages)
+(crafted-package-install-selected-packages)
+(require 'my-files-config)
 
 ;;; custom-ui-mode
 (require 'custom-ui-packages)
