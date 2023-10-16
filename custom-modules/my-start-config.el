@@ -8,7 +8,7 @@
 ;;; Commentary:
 
 ;; eliminate having to type out "yes" and "no"
-(fset 'yes-or-no-p 'y-or-n-p)
+(setq use-short-answers t)
 
 ;; choose utf-8 as the default coding system
 (set-default-coding-systems 'utf-8)
