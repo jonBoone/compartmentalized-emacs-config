@@ -48,11 +48,6 @@
 ;;; crafted-defaults - the General Crafted Emacs endorsed defaults
 (require 'crafted-defaults-config)
 
-;;; crafted-ui module
-(require 'crafted-ui-packages)
-(crafted-package-install-selected-packages)
-(require 'crafted-ui-config)
-
 ;;; custom-ui-mode
 (require 'custom-ui-packages)
 (crafted-package-install-selected-packages)
