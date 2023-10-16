@@ -11,7 +11,6 @@
 
 (add-to-list 'package-selected-packages 'super-save)
 (add-to-list 'package-selected-packages 'nerd-icons-dired)
-(add-to-list 'package-selected-packages 'dired)
 (add-to-list 'package-selected-packages 'dired-rainbow)
 (add-to-list 'package-selected-packages 'dired-single)
 
