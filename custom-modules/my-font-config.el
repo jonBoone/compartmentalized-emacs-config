@@ -30,6 +30,11 @@
   (set-face-attribute 'variable-pitch nil
                       :font "Cantarell" :height my/default-font-size :weight 'regular))
 
+;; use the nerd-icons
+(use-package nerd-icons
+  :straight t)
+
+
 (provide 'my-font-config)
 ;; END my-font-config.el
 ;;

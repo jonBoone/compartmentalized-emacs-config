@@ -22,6 +22,8 @@
 (require 'my-start-config)
 
 ;;; leverage my-font-config
+(require 'my-font-packages)
+(crafted-package-install-selected-packages)
 (require 'my-font-config)
 
 ;; additional elisp libraries
