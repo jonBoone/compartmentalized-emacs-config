@@ -13,6 +13,9 @@
 ;; choose utf-8 as the default coding system
 (set-default-coding-systems 'utf-8)
 
+;; add advice to functions without warning
+(setq ad-redefinition-action 'accept)
+
 ;; my/display-startup-time function 
 (defun my/display-startup-time ()
   (message "Emacs loaded in %s with %d garbage collections."
