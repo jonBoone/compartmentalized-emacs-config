@@ -10,11 +10,11 @@
 
 
 ;; leverage gpg for encryption
-(with-system darwin
-             (setq epg-gpg-program "gpg"))
+(my/with-system darwin
+  (setq epg-gpg-program "gpg"))
 
-(with-system gnu/linux
-             (setq epg-gpg-program "gpg2"))
+(my/with-system gnu/linux
+  (setq epg-gpg-program "gpg2"))
 
 (setq auth-sources-debug   t
       auth-sources         '((:source "~/.authinfo.gpg"))
