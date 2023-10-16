@@ -102,7 +102,7 @@ Used as hook for modes which should not display line numebrs."
   (advice-add command :after #'pulse-line))
 
 
-;;;; My custom settings
+;;;; My custom visual settings
 
 ;; customize truncation indicators and add breathing room at the edge of the window
 (define-fringe-bitmap 'right-curly-arrow
@@ -158,6 +158,72 @@ Used as hook for modes which should not display line numebrs."
 
 ;; ensure that block cursor when using xlib is the same size as the glyph
 (setq x-stretch-cursor t)
+
+;;;; Mode Line
+
+(setq display-time-format "%l:%M: %p %b %y" display-time-default-load-average nil)
+
+(use-package smart-line-mode
+  :straight t
+  :init
+  (setq sml/no-confirm-load-theme t
+        sml/mode-width            'right
+        sml/name-width            60)
+  :config
+  (sml/setup)
+  (sml/apply-theme 'respectful)
+  (setq-default mode-line-format '("%e"
+                                   mode-line-front-space
+                                   mode-line-client
+                                   mode-line-modified
+                                   mode-line-remote
+                                   mode-line-frame-identification
+                                   mode-line-buffer-identification
+                                   sml/pos-id-separator
+                                   (vc-mode vc-mode)
+                                   " "
+                                   sml/pre-modes-separator
+                                   mode-line-modes
+                                   " "
+                                   mode-line-misc-info)))
+
+(use-package minions
+  :straight t
+  :after doom-modeline-mode
+  :hook doom-modeline-mode)
+
+(use-package nerd-icons-ibuffer
+  :straight t
+  :config
+  (nerd-icons-completion-mode))
+
+(use-package doom-modeline
+  :straight t
+  :hook (after-init . doom-modeline-mode)
+  :custom-face
+  (mode-line           ((t (:height 0.90))))
+  (mode-line-inactive  ((t (:height 0.85))))
+  :init
+  (doom-modeline-mode 1)
+  :config
+  (setq doom-modeline-height                  15
+        doom-modeline-bar-width               6
+        doom-modeline-buffer-file-name-style  'relative
+        doom-modeline-buffer-state-icon       t
+        doom-modeline-github                  t
+        doom-modeline-hud                     t
+        doom-modeline-icon                    t
+        doom-modeline-eglot                   t
+        doom-modeline-major-mode-color-icon   t
+        doom-modeline-major-mode-icon         t
+        doom-modeline-minor-mode-icon         t
+        doom-modeline-minmor-modes            t
+        doom-modeline-project-detection       t
+        doom-modeline-unicode-fallback        t))
+
+
+
+
 
 ;; manage popup windows with popper
 (use-package popper
