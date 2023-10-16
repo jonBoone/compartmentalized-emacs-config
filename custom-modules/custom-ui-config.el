@@ -104,6 +104,13 @@ Used as hook for modes which should not display line numebrs."
 
 ;;;; My custom visual settings
 
+;; color theme
+(use-package doom-themes
+  :straight t
+  :init
+  (load-theme 'doom-nord-light t)
+  (doom-themes-visual-bell-config))
+
 ;; customize truncation indicators and add breathing room at the edge of the window
 (define-fringe-bitmap 'right-curly-arrow
   [#b10000000
@@ -220,10 +227,6 @@ Used as hook for modes which should not display line numebrs."
         doom-modeline-minmor-modes            t
         doom-modeline-project-detection       t
         doom-modeline-unicode-fallback        t))
-
-
-
-
 
 ;; manage popup windows with popper
 (use-package popper
