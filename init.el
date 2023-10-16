@@ -42,6 +42,9 @@
 (crafted-package-install-selected-packages)
 (require 'keybinding-libraries-config)
 
+;;; my defaults
+(require 'my-defaults-config)
+
 ;;; crafted-defaults - the General Crafted Emacs endorsed defaults
 (require 'crafted-defaults-config)
 
