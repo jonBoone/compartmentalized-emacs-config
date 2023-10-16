@@ -163,7 +163,7 @@ Used as hook for modes which should not display line numebrs."
 
 (setq display-time-format "%l:%M: %p %b %y" display-time-default-load-average nil)
 
-(use-package smart-line-mode
+(use-package smart-mode-line
   :straight t
   :init
   (setq sml/no-confirm-load-theme t
