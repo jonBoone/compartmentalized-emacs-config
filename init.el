@@ -65,6 +65,12 @@
 (crafted-package-install-selected-packages)
 (require 'crafted-completion-config)
 
+;;; crafted-writing module
+(require 'crafted-writing-packages)
+(crafted-package-install-selected-packages)
+(require 'crafted-writing-config)
+
+
 ;;; crafted-idea module
 (require 'crafted-ide-packages)
 (crafted-package-install-selected-packages)
