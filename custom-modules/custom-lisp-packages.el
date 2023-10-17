@@ -9,7 +9,9 @@
 
 ;;; Code
 (add-to-list 'package-selected-packages 'expand-region)
+(add-to-list 'package-selected-packages 'lispy)
 (add-to-list 'package-selected-packages 'parinfer)
+(add-to-list 'package-selected-packages 'smartparens)
 
 (provide 'custom-lisp-packages)
 ;; END custom-lisp-packages.el
