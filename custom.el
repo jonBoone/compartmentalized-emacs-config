@@ -20,7 +20,7 @@
  '(fast-but-imprecise-scrolling t)
  '(global-auto-revert-non-file-buffers t)
  '(ibuffer-movement-cycle nil)
- '(ibuffer-old-time 24)
+ '(ibuffer-old-time 24 t)
  '(inferior-lisp-program "sbcl")
  '(kill-do-not-save-duplicates t)
  '(load-prefer-newer t t)
@@ -36,6 +36,8 @@
  '(switch-to-buffer-obey-display-actions t)
  '(tab-always-indent 'complete)
  '(vertico-cycle t)
+ '(whitespace-action '(cleanup auto-cleanup))
+ '(whitespace-style '(face empty trailing tab-mark indentation::space))
  '(xref-show-definitions-function 'xref-show-definitions-completing-read t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
