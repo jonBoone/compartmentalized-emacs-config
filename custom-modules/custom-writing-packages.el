@@ -10,7 +10,6 @@
 ;;; Code
 (add-to-list 'package-selected-packages 'ws-butler)
 
-
 (provide 'custom-writing-packages)
 ;; END custom-writing-packages.el
 ;;
