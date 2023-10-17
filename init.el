@@ -91,7 +91,7 @@
 (require 'crafted-lisp-config)
 
 ;;; custom-lisp module
-(require 'custom-lisp-package)
+(require 'custom-lisp-packages)
 (crafted-package-install-selected-packages)
 (require 'custom-lisp-config)
 
