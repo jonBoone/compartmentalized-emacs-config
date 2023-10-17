@@ -9,9 +9,9 @@
 
 ;;; custom.el support
 (setq custom-file (expand-file-name "custom.el"
-				    user-emacs-directory))
+                                    user-emacs-directory))
 (when (and custom-file
-	   (file-exists-p custom-file))
+           (file-exists-p custom-file))
   (load custom-file nil :nomessage))
 
 ;;;; modules
@@ -70,8 +70,12 @@
 (crafted-package-install-selected-packages)
 (require 'crafted-writing-config)
 
+;;; custom-writing module
+(require 'custom-writing-packages)
+(crafted-package-install-selected-packages)
+(require 'custom-writing-config)
 
-;;; crafted-idea module
+;;; crafted-ide module
 (require 'crafted-ide-packages)
 (crafted-package-install-selected-packages)
 (require 'crafted-ide-config)
@@ -80,7 +84,6 @@
 (require 'crafted-lisp-packages)
 (crafted-package-install-selected-packages)
 (require 'crafted-lisp-config)
-
 
 ;;; initial-buffers module
 (require 'initial-buffers-packages)
