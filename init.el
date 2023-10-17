@@ -81,6 +81,12 @@
 (crafted-package-install-selected-packages)
 (require 'crafted-lisp-config)
 
+
+;;; initial-buffers module
+(require 'initial-buffers-packages)
+(crafted-package-install-selected-packages)
+(require 'initial-buffers-config)
+
 (provide 'init)
 
 ;; END init.el
