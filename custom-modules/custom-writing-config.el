@@ -7,18 +7,13 @@
 
 ;;; Commentary:
 
+;; ensure parens match
+(when (require 'paren nil :noerror)
+  (set-face-attribute 'show-paren-match-expression nil :background "#363e4a"))
 
-;;; config packages already loaded and partially configed in crafted-writing-config
-(with-eval-after-load 'crafted-writing-config
-  ;; ensure parens match
-  (use-package paren
-    :config
-    (set-face-attribute 'show-paren-match-expression nil :background "#363e4a"))
-
-  ;; turn on global whitespace instead of tabs
-  (with-eval-after-load 'crafted-writing-config
-    (crafted-writing-configure-whitespace nil t)))
-
+;; turn on global whitespace instead of tabs
+(when (require 'crafted-writing-config nil :noerror)
+  (crafted-writing-configure-whitespace nil t))
 
 ;; set the default tab-width to 2 spaces
 (custom-set-default 'tab-width 2)
