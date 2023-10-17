@@ -80,6 +80,11 @@
 (crafted-package-install-selected-packages)
 (require 'crafted-ide-config)
 
+;;; custom-ide module
+(require 'custom-ide-packages)
+(crafted-package-install-selected-packages)
+(require 'custom-ide-config)
+
 ;;; crafted-lisp module
 (require 'crafted-lisp-packages)
 (crafted-package-install-selected-packages)
