@@ -9,7 +9,7 @@
 
 ;;; Code
 (add-to-list 'package-selected-packages 'expand-region)
-(add-to-list 'package-selected-packages 'rainbow-delimters)
+(add-to-list 'package-selected-packages 'rainbow-delimiters)
 
 (provide 'custom-ide-packages)
 ;; END custom-ide-packages.el

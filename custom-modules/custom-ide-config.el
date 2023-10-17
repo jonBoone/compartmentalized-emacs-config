@@ -15,7 +15,7 @@
    ("C-(" . er/mark-outside-pairs)))
 
 ;; colorize nested parentheses and brackets according to their nesting depth
-(use-package rainbow-delimters
+(use-package rainbow-delimiters
   :straight t
   :hook (prog-mode . rainbow-delimiters-mode))
 
