@@ -14,6 +14,11 @@
   (("M-[" . er/expand-region)
    ("C-(" . er/mark-outside-pairs)))
 
+;; colorize nested parentheses and brackets according to their nesting depth
+(use-package rainbow-delimters
+  :straight t
+  :hook (prog-mode . rainbow-delimiters-mode))
+
 (provide 'custom-ide-config)
 ;; END custom-ide-config.el
 ;;
