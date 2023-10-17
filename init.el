@@ -90,6 +90,11 @@
 (crafted-package-install-selected-packages)
 (require 'crafted-lisp-config)
 
+;;; custom-lisp module
+(require 'custom-lisp-package)
+(crafted-package-install-selected-packages)
+(require 'custom-lisp-config)
+
 ;;; initial-buffers module
 (require 'initial-buffers-packages)
 (crafted-package-install-selected-packages)
