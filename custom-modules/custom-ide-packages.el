@@ -10,8 +10,8 @@
 ;;; Code
 (add-to-list 'package-selected-packages 'expand-region)
 
-(provide 'custom-writing-packages)
-;; END custom-writing-packages.el
+(provide 'custom-ide-packages)
+;; END custom-ide-packages.el
 ;;
 
-;; custom-writing-packages.el ends here
+;; custom-ide-packages.el ends here
