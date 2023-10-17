@@ -157,7 +157,7 @@ Used as hook for modes which should not display line numebrs."
 (global-display-line-numbers-mode t)
 
 ;; don't display line numbers for these modes
-(dolist (mode '(comint-mode-hook treemacs-mode-hook))
+(dolist (mode '(shell-mode term-mode comint-mode-hook treemacs-mode-hook))
   (add-hook mode 'crafted-ui--disable-line-numbers-mode))
 
 ;; set the frame transparency
