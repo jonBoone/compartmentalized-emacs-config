@@ -20,7 +20,7 @@
  '(fast-but-imprecise-scrolling t)
  '(global-auto-revert-non-file-buffers t)
  '(ibuffer-movement-cycle nil)
- '(ibuffer-old-time 24)
+ '(ibuffer-old-time 24 t)
  '(inferior-lisp-program "sbcl")
  '(kill-do-not-save-duplicates t)
  '(load-prefer-newer t t)
