@@ -15,7 +15,7 @@
 (add-to-list 'package-selected-packages 'vterm)
 (add-to-list 'package-selected-packages 'multi-vterm)
 
-(provterm 'custom-term-packages)
+(provide 'custom-term-packages)
 ;; END custom-term-packages.el
 ;;
 

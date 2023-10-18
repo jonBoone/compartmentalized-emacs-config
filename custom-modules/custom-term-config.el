@@ -38,7 +38,7 @@
   :config
   (setq multi-vterm-dedicated-window-height-percent 10))
 
-(provterm 'custom-term-config)
+(provide 'custom-term-config)
 ;; END custom-term-config.el
 ;;
 
