@@ -1,7 +1,7 @@
 ;;; custom-term-config.el --- custom term configuration  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023
-;; SPDX-License-Termntifier: MIT
+;; SPDX-License-Identifier: MIT
 
 ;; Author: Jon Boone
 
