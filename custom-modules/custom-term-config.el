@@ -21,6 +21,8 @@
 ;; vterm is my preferred terminal mode
 (use-package vterm
   :straight t
+  :init
+  (setq vterm-always-compile-module t)
   :bind
   (("C-x t" . vterm)
    :map vterm-mode-map
