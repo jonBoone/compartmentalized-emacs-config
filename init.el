@@ -65,6 +65,11 @@
 (crafted-package-install-selected-packages)
 (require 'crafted-completion-config)
 
+;;; custom-term module
+(require 'custom-term-packages)
+(crafted-package-install-selected-packages)
+(require 'custom-term-config)
+
 ;;; crafted-writing module
 (require 'crafted-writing-packages)
 (crafted-package-install-selected-packages)
