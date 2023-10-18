@@ -37,8 +37,8 @@
   :hook (after-init . global-flycheck)
   :diminish)
 
-(provide 'my-defaults-config)
-;; END my-defaults-config.el
+(provide 'custom-defaults-config)
+;; END custom-defaults-config.el
 ;;
 
-;; my-defaults-config.el ends here
+;; custom-defaults-config.el ends here
