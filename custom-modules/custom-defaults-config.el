@@ -30,7 +30,7 @@
   (add-hook 'prog-mode-hook #'flyspell-prog-mode)
   :config
   (setq ispell-program-name "aspell"
-        ispell-extra-args  ("--sug-mode=ultra")))
+        ispell-extra-args  '("--sug-mode=ultra")))
 
 (use-package flycheck
   :straight t
