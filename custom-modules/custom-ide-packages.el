@@ -8,6 +8,8 @@
 ;;; Commentary:
 
 ;;; Code
+(add-to-list 'package-selected-packages 'ansi-color)
+(add-to-list 'package-selected-packages 'compile)
 (add-to-list 'package-selected-packages 'expand-region)
 (add-to-list 'package-selected-packages 'rainbow-delimiters)
 
