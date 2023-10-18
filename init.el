@@ -44,8 +44,10 @@
 (crafted-package-install-selected-packages)
 (require 'keybinding-libraries-config)
 
-;;; leverage my-defaults module
-(require 'my-defaults-config)
+;;; leverage custom-defaults module
+(require 'custom-defaults-packages)
+(crafted-package-install-selected-packages)
+(require 'custom-defaults-config)
 
 ;;; crafted-defaults - the General Crafted Emacs endorsed defaults
 (require 'crafted-defaults-config)
