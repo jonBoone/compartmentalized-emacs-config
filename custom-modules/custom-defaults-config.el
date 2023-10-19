@@ -37,6 +37,12 @@
   :hook (after-init . global-flycheck)
   :diminish)
 
+(use-package default-text-scale
+  :defer t
+  :config
+  (default-text-scale-mode))
+
+
 (provide 'custom-defaults-config)
 ;; END custom-defaults-config.el
 ;;

@@ -8,6 +8,7 @@
 ;;; Commentary:
 
 ;;; Code
+(add-to-list 'package-selected-packages 'default-text-scale)
 (add-to-list 'package-selected-packages 'flyspell)
 (add-to-list 'package-selected-packages 'flycheck)
 
