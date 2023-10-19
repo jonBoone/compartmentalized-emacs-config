@@ -42,6 +42,8 @@
   :after (magit vc)
   :commands ediff
   :config
+  (with-eval-after-load 'winner
+    (add-hook 'ediff-quit-hook 'winner-undo))
   (setq ediff-window-setup-function 'ediff-setup-windows-plain))
 
 (use-package diff-hl
