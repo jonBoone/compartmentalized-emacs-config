@@ -10,7 +10,13 @@
 ;;; Code
 (add-to-list 'package-selected-packages 'ansi-color)
 (add-to-list 'package-selected-packages 'compile)
+(add-to-list 'package-selected-packages 'diff-hl)
+(add-to-list 'package-selected-packages 'ediff)
 (add-to-list 'package-selected-packages 'expand-region)
+(add-to-list 'package-selected-packages 'forge)
+(add-to-list 'package-selected-packages 'git-link)
+(add-to-list 'package-selected-packages 'magit)
+(add-to-list 'package-selected-packages 'magit-todos)
 (add-to-list 'package-selected-packages 'rainbow-delimiters)
 
 (provide 'custom-ide-packages)
