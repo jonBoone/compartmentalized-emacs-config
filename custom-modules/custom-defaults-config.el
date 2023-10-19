@@ -32,11 +32,6 @@
   (setq ispell-program-name "aspell"
         ispell-extra-args  '("--sug-mode=ultra")))
 
-(use-package flycheck
-  :straight t
-  :hook (after-init . global-flycheck)
-  :diminish)
-
 (use-package default-text-scale
   :defer t
   :config
