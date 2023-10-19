@@ -23,6 +23,11 @@
   :straight t
   :hook (prog-mode text-mode))
 
+;; configure markdown-mode
+(when (require 'crafted-writing-config nil :noerror)
+  (setq markdown-command '("pandoc" "-f" "gfm" "-t" "html5")
+        markdown-live-preview-window-function #'xwidget-webkit-browse-url))
+
 (provide 'custom-writing-config)
 ;; END custom-writing-config.el
 ;;
