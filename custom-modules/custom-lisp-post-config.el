@@ -1,4 +1,4 @@
-;;; custom-lisp-config.el --- custom ide configuration  -*- lexical-binding: t; -*-
+;;; custom-lisp-post-config.el --- custom lisp post-config -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023
 ;; SPDX-License-Identifier: MIT
@@ -28,9 +28,19 @@
   :straight t
   :hook prog-mode)
 
+;; sly post-config
 
-(provide 'custom-lisp-config)
-;; END custom-lisp-config.el
+;; keymap bindings
+(eval-after-load 'sly
+  `(define-key sly-prefix-map (kbd "M-h") 'sly-documentation-lookup))
+
+(eval-after-load 'sly-mrepl
+  `(define-key sly-mrepl-mode-map (kbd "C-c C-k") `sly-mrepl-clear-recent-output)
+  (custom-set-faces 'sly-mrepl-output-face '((t (:foreground "sienna")))))
+
+
+(provide 'custom-lisp-post-config)
+;; END custom-lisp-post-config.el
 ;;
 
-;; custom-lisp-config.el ends here
+;; custom-lisp-post-config.el ends here
