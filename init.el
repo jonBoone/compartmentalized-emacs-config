@@ -92,15 +92,13 @@
 (crafted-package-install-selected-packages)
 (require 'custom-ide-config)
 
-;;; crafted-lisp module
+;;; crafted-lisp and custom-lisp modules
 (require 'crafted-lisp-packages)
-(crafted-package-install-selected-packages)
-(require 'crafted-lisp-config)
-
-;;; custom-lisp module
 (require 'custom-lisp-packages)
 (crafted-package-install-selected-packages)
-(require 'custom-lisp-config)
+(require 'custom-lisp-pre-config)
+(require 'crafted-lisp-config)
+(require 'custom-lisp-post-config)
 
 ;;; initial-buffers module
 (require 'initial-buffers-packages)
