@@ -11,7 +11,6 @@
 (add-to-list 'package-selected-packages 'expand-region)
 (add-to-list 'package-selected-packages 'lispy)
 (add-to-list 'package-selected-packages 'parinfer)
-(add-to-list 'package-selected-packages 'sly-mrepl)
 (add-to-list 'package-selected-packages 'smartparens)
 
 (provide 'custom-lisp-packages)
