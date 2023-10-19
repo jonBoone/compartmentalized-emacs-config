@@ -255,6 +255,14 @@ Used as hook for modes which should not display line numebrs."
         popper-display-control   'user)
   (popper-mode +1))
 
+(use-package winner
+  :straight nil
+  :bind
+  (("s-/" . winner-undo)
+   ("s-?" . winner-redo))
+  :config
+  (winner-mode))
+
 (provide 'custom-ui-config)
 ;; END custom-ui-config.el
 ;;

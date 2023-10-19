@@ -17,6 +17,7 @@
 (add-to-list 'package-selected-packages 'nerd-icons-ibuffer)
 (add-to-list 'package-selected-packages 'popper)
 (add-to-list 'package-selected-packages 'smart-mode-line)
+(add-to-list 'package-selected-packages 'winner)
 
 
 (provide 'custom-ui-packages)
