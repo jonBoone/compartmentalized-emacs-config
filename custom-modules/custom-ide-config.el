@@ -7,6 +7,35 @@
 
 ;;; Commentary:
 
+;; configure tree-sitter
+(crafted-ide-configure-tree-sitter)
+
+;; configure dape for debugging adapters
+(use-package dape
+  ;; Currently only available via github
+  :straight (dape :type git :host github :repo "svaante/dape")
+  :config
+  ;; Add inline variable hints **EXPERIMENTAL**
+  (setq dape-inline-variables t)
+
+  ;; To remove info buffer on startup
+  ;; (remove-hook 'dape-on-start-hooks 'dape-info)
+
+  ;; To remove repl buffer on startup
+  ;; (remove-hook 'dape-on-start-hooks 'dape-repl)
+
+  ;; By default dape uses gdb keybinding prefix
+  (setq dape-key-prefix "C-x C-a")
+
+  ;; Use n for next etc. in REPL
+  (setq dape-repl-use-shorthand t)
+
+  ;; Kill compile buffer on build success
+  (add-hook 'dape-compile-compile-hooks 'kill-buffer))
+
+;; Projectile users
+;; (setq dape-cwd-fn 'projectile-project-root)
+
 ;; setup magit-related version control support
 (use-package magit
   :straight t
