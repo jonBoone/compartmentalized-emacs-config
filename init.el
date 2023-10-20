@@ -100,6 +100,11 @@
 (require 'crafted-lisp-config)
 (require 'custom-lisp-post-config)
 
+;;; custom-python module (resurrected from crafted-emacs/crafted-python-deprecated module)
+(require 'custom-python-packages)
+(crafted-package-install-selected-packages)
+(require 'custom-python-config)
+
 ;;; initial-buffers module
 (require 'initial-buffers-packages)
 (crafted-package-install-selected-packages)
