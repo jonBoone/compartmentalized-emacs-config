@@ -45,11 +45,13 @@
 ;;; Code:
 
 ;; Hooks
-(when (featurep 'anaconda-mode)
+
+(with-eval-after-load "anaconda"
   (add-hook 'python-mode-hook #'anaconda-mode))
 
-(when (featurep 'blacken)
+(with-eval-after-load "blacken"
   (add-hook 'python-mode-hook #'blacken-mode))
+
 
 (when (and (featurep 'dape) (featurep 'debugpg))
   (add-to-list 'dape-configs
@@ -65,13 +67,14 @@
 ;; edloc is built-in
 (add-hook 'python-mode-hook #'eldoc-mode)
 
-(when (featurep 'eglot)
-  (add-hook 'python-mode-hook #'eglot-ensure))
+(with-eval-after-load "eglot"
+  (add-hook 'python-mode-hook 'eglot-ensure))
 
 
 p;;; anaconda
 ;; for those who use posframe, use it to show docs
-(when (featurep 'posframe)
+
+(with-eval-after-load "posframe"
   (customize-set-variable 'anaconda-mode-use-posframe-show-doc t))
 
 
@@ -81,7 +84,8 @@ p;;; anaconda
 
 
 ;;; numpydoc
-(when (featurep 'numpydoc)
+
+(with-eval-after-load "numpy"
   (customize-set-variable 'numpydoc-insert-examples-block nil)
   (customize-set-variable 'numpydoc-template-long nil))
 
