@@ -14,7 +14,7 @@
  '(corfu-cycle t)
  '(dired-auto-revert-buffer t)
  '(dired-dwim-target t)
- '(ediff-window-setup-function 'ediff-setup-windows-plain t)
+ '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(eglot-autoshutdown t t)
  '(eshell-scroll-to-bottom-on-input 'this t)
  '(fast-but-imprecise-scrolling t)
