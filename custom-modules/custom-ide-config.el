@@ -52,7 +52,7 @@
     (interactive)
     (let ((dir (project-root (project-current t))))
       (magit-status dir)))
-  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
+  (setq magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
 
 (use-package forge
   :straight t
