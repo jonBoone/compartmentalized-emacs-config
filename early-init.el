@@ -62,7 +62,6 @@
 (require 'custom-straight-config)
 
 (provide 'early-init)
-
 ;; END early-init.el
 ;;
 
