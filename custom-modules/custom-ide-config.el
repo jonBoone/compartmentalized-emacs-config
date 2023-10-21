@@ -8,7 +8,7 @@
 ;;; Commentary:
 
 ;; configure tree-sitter
-(crafted-ide-configure-tree-sitter)
+;;(crafted-ide-configure-tree-sitter)
 
 ;; configure dape for debugging adapters
 (use-package dape
