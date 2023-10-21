@@ -77,7 +77,7 @@
 
 (use-package diff-hl
   :straight t
-  :defer 5
+  :defer t
   :hook
   ((magit-pre-refresh . diff-hl-magit-pre-refresh)
    (magit-pre-refresh . diff-hl-magit-post-refresh))
