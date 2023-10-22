@@ -9,6 +9,7 @@
 
 ;;; Code
 (add-to-list 'package-selected-packages 'diminish)
+(add-to-list 'package-selected-packages 'python-mode)
 
 (provide 'custom-straight-packages)
 ;; END custom-straight-packages.el
