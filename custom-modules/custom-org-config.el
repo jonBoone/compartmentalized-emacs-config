@@ -27,7 +27,7 @@
   (add-hook 'org-mode-hook 'org-appear-mode))
 
 ;; Disable auto-pairing of "<" in org-mode with electric-pair-mode
-(defun customorg-enhance-electric-pair-inhibit-predicate ()
+(defun custom-org-enhance-electric-pair-inhibit-predicate ()
   "Disable auto-pairing of \"<\" in `org-mode' when using `electric-pair-mode'."
   (when (and electric-pair-mode (eql major-mode #'org-mode))
     (setq-local electric-pair-inhibit-predicate

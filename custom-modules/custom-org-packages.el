@@ -16,5 +16,5 @@
 (add-to-list 'package-selected-packages 'org-contrib)
 (add-to-list 'package-selected-packages 'org-appear)
 
-(provide 'cucstom-org-packages)
+(provide 'custom-org-packages)
 ;;; custom-org-packages.el ends here
