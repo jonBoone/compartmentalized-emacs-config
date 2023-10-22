@@ -49,6 +49,11 @@
 (crafted-package-install-selected-packages)
 (require 'custom-defaults-config)
 
+;;; add support for org-mode
+(require 'custom-org-packages)
+(crafted-package-install-selected-packages)
+(require 'custom-org-config)
+
 ;;; crafted-defaults - the General Crafted Emacs endorsed defaults
 (require 'crafted-defaults-config)
 
