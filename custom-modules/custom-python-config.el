@@ -44,50 +44,66 @@
 
 ;;; Code:
 
-;; Hooks
+;;; python mode
+(use-package python-mode
+  :straight (:type git)
+  :hook (python-mode . eglot-ensure)
+  :init
+  (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+  :config
+  (setq python-flymake-command                     '("flake8" "-")
+        python-indent-trigger-commands             '(yas-expand)
+        python-shell-interpreter                   "jupyter"
+        python-shell-intrepreter-args              "console --simple-prompt"
+        python-shell-prompt-detect-failure-warning nil
+        python-shell-prompt-output-regexp          "Out\\[0-9]+\\]: "
+        python-shell-prompt-regexp                 "In \\[0-9]+\\]: ")
+  (customize-set-variable 'python-indent-guess-indent-offset-verbose nil))
 
-(with-eval-after-load "anaconda"
-  (add-hook 'python-mode-hook #'anaconda-mode))
-
-(with-eval-after-load "blacken"
-  (add-hook 'python-mode-hook #'blacken-mode))
-
-
-(when (and (featurep 'dape) (featurep 'debugpg))
-  (add-to-list 'dape-configs
-               `(debugpy
-                 modes (python-ts-mode python-mode)
-                 command "python"
-                 command-args ("-m" "debugpy.adapter"))
-               :type "executable"
-               :request "launch"
-               :cwd dape-cwd-fn
-               :program dape-find-file-buffer-default))
-
+
 ;; edloc is built-in
 (add-hook 'python-mode-hook #'eldoc-mode)
 
-(with-eval-after-load "eglot"
-  (add-hook 'python-mode-hook 'eglot-ensure))
-
 
-p;;; anaconda
-;; for those who use posframe, use it to show docs
+;;; anaconda
+(use-package anaconda-mode
+  :straight t
+  :after python-mode)
 
-(with-eval-after-load "posframe"
+;; for those who use posframe, use it to show docs
+(with-eval-after-load 'posframe
   (customize-set-variable 'anaconda-mode-use-posframe-show-doc t))
 
 
-;;; python mode
-(customize-set-variable 'python-indent-guess-indent-offset-verbose nil)
+;;; blacken for linting
 
+(use-package blacken
+  :straight t
+  :after python-mode
+  :hook python-mode)
 
 
 ;;; numpydoc
 
-(with-eval-after-load "numpy"
+(use-package numpydoc
+  :straight t
+  :after python-mode
+  :config
   (customize-set-variable 'numpydoc-insert-examples-block nil)
   (customize-set-variable 'numpydoc-template-long nil))
 
-(provide 'crafted-python-config)
-;;; crafted-python-config.el ends here
+
+;;; dape for debug adapter protocol support
+(with-eval-after-load 'dape
+  (add-to-list 'dape-configs
+               `(debugpy
+                 modes (python-ts-mode python-mode)
+                 command "python"
+                 command-args ("-m" "debugpy.adapter")
+                 :type "executable"
+                 :request "launch"
+                 :cwd dape-cwd-fn
+                 :program dape-find-file-buffer-default)))
+
+(provide 'custom-python-config)
+;;; custom-python-config.el ends here

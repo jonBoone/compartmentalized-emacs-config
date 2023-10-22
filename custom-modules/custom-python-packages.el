@@ -11,7 +11,6 @@
 ;;; Code
 (add-to-list 'package-selected-packages 'anaconda-mode)
 (add-to-list 'package-selected-packages 'blacken)
-(add-to-list 'package-selected-packages 'debugpy)
 (add-to-list 'package-selected-packages 'numpydoc)
 
 (provide 'custom-python-packages)
