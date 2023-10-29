@@ -15,9 +15,6 @@
 (when (require 'crafted-writing-config nil :noerror)
   (crafted-writing-configure-whitespace nil t))
 
-;; set the default tab-width to 2 spaces
-(custom-set-default 'tab-width 2)
-
 ;; automatically cleanup whitespace
 (use-package ws-butler
   :straight t

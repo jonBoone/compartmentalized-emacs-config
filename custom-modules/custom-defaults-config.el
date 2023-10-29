@@ -37,6 +37,10 @@
   :config
   (default-text-scale-mode))
 
+;; configure common default settings
+(custom-set-default 'tab-width 2)
+(custom-set-default 'indent-tabs-mode t)
+(custom-set-default 'tabs-always-indent 'complete)
 
 (provide 'custom-defaults-config)
 ;; END custom-defaults-config.el
