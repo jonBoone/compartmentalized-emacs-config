@@ -26,7 +26,10 @@
 ;; use smartparens
 (use-package smartparens
   :straight t
-  :hook prog-mode)
+  :hook prog-mode
+  :config
+  (sp-with-modes '(org-mode)
+    (sp-local-pair "*" "*")))
 
 ;; set these values prior to loading sly package
 ;; set these values prior to loading sly
