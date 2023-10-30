@@ -7,6 +7,9 @@
 
 ;;; Commentary:
 
+;; bind 'my-config-file to "init.el" by default
+(custom-set-default 'my-config-file "init.el")
+
 ;; eliminate having to type out "yes" and "no"
 (setq use-short-answers t)
 
@@ -16,7 +19,7 @@
 ;; add advice to functions without warning
 (setq ad-redefinition-action 'accept)
 
-;; my/display-startup-time function 
+;; my/display-startup-time function
 (defun my/display-startup-time ()
   (message "Emacs loaded in %s with %d garbage collections."
            (format "%.2f seconds"
@@ -41,13 +44,13 @@
 ;; my/open-config function
 (defun my/open-config ()
   (interactive)
-  (find-file config-file))
+  (find-file (expand-file-name my-config-file user-emacs-directory)))
 
 ;; my/reload-config function
 (defun my/reload-config ()
   "Reload init file, which will effectively reload everything"
   (interactive)
-  (load-file (expand-file-name "init.el" user-emacs-directory)))
+  (load-file (expand-file-name my-config-file user-emacs-directory)))
 
 ;; define macro to perform actions based on detected system-type
 (defmacro my/with-system (type &rest body)
