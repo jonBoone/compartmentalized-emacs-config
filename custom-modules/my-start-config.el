@@ -19,6 +19,13 @@
 ;; add advice to functions without warning
 (setq ad-redefinition-action 'accept)
 
+;; define macro to perform actions based on detected system-type
+(defmacro my/with-system (type &rest body)
+  "Evaluate BODY if 'system-type' equals TYPE."
+  (declare (indent defun))
+  `(when (eq system-type ',type)
+     ,@body))
+
 ;; my/display-startup-time function
 (defun my/display-startup-time ()
   (message "Emacs loaded in %s with %d garbage collections."
@@ -52,12 +59,6 @@
   (interactive)
   (load-file (expand-file-name my-config-file user-emacs-directory)))
 
-;; define macro to perform actions based on detected system-type
-(defmacro my/with-system (type &rest body)
-  "Evaluate BODY if 'system-type' equals TYPE."
-  (declare (indent defun))
-  `(when (eq system-type ',type)
-     ,@body))
 
 ;; frame transparency setting
 (defvar my/frame-transparency '(90 . 90))
