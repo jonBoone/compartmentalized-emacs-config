@@ -30,6 +30,10 @@
 (push '(tool-bar-lines . 0) default-frame-alist)
 (push '(vertical-scroll-bars . 0) default-frame-alist)
 
+;; disable undesirable startup behaviors
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+
 ;; native compiler support
 (message (concat
           "Native compilation is "
