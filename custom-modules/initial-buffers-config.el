@@ -8,7 +8,10 @@
 ;;; Commentary:
 
 ;; don't show the startup message
-(setq inhibit-startup-message t)
+(setq inhibit-startup-screen            t
+      inhibit-startup-echo-area-message t
+      inhibit-startup-message           t
+      inhibit-scratch-message           t)
 
 ;; show a dashboard upon start
 (use-package dashboard
@@ -20,7 +23,7 @@
         dashboard-items             '((agenda . 16))
         dashboard-icon-type         'nerd-icons
         dashboard-display-icons-p   t)
-        (dashboard-setup-startup-hook))
+  (dashboard-setup-startup-hook))
 
 (provide 'initial-buffers-config)
 ;; END initial-buffers-config.el
