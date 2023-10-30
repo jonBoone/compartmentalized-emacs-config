@@ -84,6 +84,15 @@
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize)))
 
+;; ensure we have all modifiers available
+(my/with-system darwin
+  (setq mac-command-modifier       'meta
+        mac-option-modifier        'super
+        mac-control-modifier       'control
+        ns-function-modifier       'hyper
+        mac-right-option-modifier  'alt))
+
+
 (provide 'my-start-config)
 ;; END my-start-config.el
 ;;
