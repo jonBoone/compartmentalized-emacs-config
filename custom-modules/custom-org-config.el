@@ -42,5 +42,75 @@
 (add-hook 'electric-pair-mode-hook #'custom-org-enhance-electric-pair-inhibit-predicate)
 (add-hook 'org-mode-hook #'custom-org-enhance-electric-pair-inhibit-predicate)
 
+
+;;; Org-Roam Support
+(use-package org-roam
+  :straight t
+  :bind
+  (:map org-roam-mode-map
+        ("C-c n l"     . org-roam-buffer-toggle)
+        ("C-c n d"     . org-roam-dailies-find-date)
+        ("C-c n f"     . org-roam-find-file)
+        ("C-c n i"     . org-roam-node-insert))
+
+  :config
+  (setq org-roam-directory                  "~/Dropbox/pkb/org"
+        org-roam-capture-templates          '(("m" "main" plain
+                                               "%?"
+                                               :if-new
+                                               (file+head "main/${slug}.org"
+                                                          "#+title: ${title\n}")
+                                               :immediate-finish t
+                                               :unnarrowed t)
+                                              ("r" "reference" plain
+                                               "%?"
+                                               :if-new
+                                               (file+head "reference/${title}.org"
+                                                          "#+title: ${title}\n")
+                                               :immediate-finish t
+                                               :unnarrowed t)
+                                              ("a" "article" plain
+                                               "%?"
+                                               :if-new
+                                               (file+head "article/${title}.org"
+                                                          "#+title: ${title}\n")
+                                               :immediate-finish t
+                                               :unnarrowed t))
+        org-roam-completion-everywhere      t
+        org-roam-completion-system          'default
+        org-roam-dailies-capture-templates  '(("d" "default" entry
+                                               #'org-roam-capture--get-point
+                                               "* %?"
+                                               :file-name "Journal/%<%Y-%m-%d>"
+                                               :head "#+title: %<%Y-%m-%d %a>\n\n[[roam:%<%Y-%B>]]\n\n")
+                                              ("t" "Task" entry
+                                               #'org-roam-capture--get-point
+                                               "* FUTURE %?\n  %U\n  %a\n  %i"
+                                               :file-name "Journal/%<%Y-%m-%d>"
+                                               :olp ("Tasks")
+                                               :empty-lines 1
+                                               :head "#+title: %<%Y-%m-%d %a>\n\n[[roam:%<%Y-%B>]]\n\n")
+                                              ("j" "journal" entry
+                                               #'org-roam-capture--get-point
+                                               "* %<%I:%M %p> - Journal  :journal:\n\n%?\n\n"
+                                               :file-name "Journal/%<%Y-%m-%d>"
+                                               :olp ("Log")
+                                               :head "#+title: %<%Y-%m-%d %a>\n\n[[roam:%<%Y-%B>]]\n\n")
+                                              ("l" "log entry" entry
+                                               #'org-roam-capture--get-point
+                                               "* %<%I:%M %p> - %?"
+                                               :file-name "Journal/%<%Y-%m-%d>"
+                                               :olp ("Log")
+                                               f:head "#+title: %<%Y-%m-%d %a>\n\n[[roam:%<%Y-%B>]]\n\n")
+                                              ("m" "meeting" entry
+                                               #'org-roam-capture--get-point
+                                               "* %<%I:%M %p> - %^{Meeting Title}  :meetings:\n\n%?\n\n"
+                                               :file-name "Journal/%<%Y-%m-%d>"
+                                               :olp ("Log")
+                                               :head "#+title: %<%Y-%m-%d %a>\n\n[[roam:%<%Y-%B>]]\n\n"))
+        org-roam-dailies-directory          "journal/")
+  (org-roam-db-autosync-mode)
+  (org-roam-setup))
+
 (provide 'custom-org-config)
 ;;; custom-org-config.el ends here
