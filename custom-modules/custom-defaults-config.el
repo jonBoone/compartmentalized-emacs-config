@@ -24,7 +24,7 @@
 ;; leverage flyspell package
 (use-package flyspell
   :straight t
-  :hook (text-mode . flyspell)
+  :hook (text-mode . flyspell-mode)
   :diminish
   :init
   (add-hook 'prog-mode-hook #'flyspell-prog-mode)
