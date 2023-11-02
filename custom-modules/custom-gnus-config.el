@@ -11,13 +11,11 @@
 
 ;;; Code:
 
-(use-package epg
-  :defer t)
-
 (use-package epa
   :defer t
   :config
-  (setq epa-popup-info-window nil))
+  (setq epa-popup-info-window nil)
+  (epa-file-enable))
 
 (use-package epg
   :defer t
