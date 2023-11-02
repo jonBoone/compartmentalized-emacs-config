@@ -14,13 +14,14 @@
 (use-package epa
   :defer t
   :config
-  (setq epa-popup-info-window nil)
+  (setq epa-popup-info-window nil
+        epa-pinentry-mode     'loopback)
   (epa-file-enable))
 
 (use-package epg
   :defer t
   :config
-  (setq epg-pinentry-mode 'loopback))
+  (custom-set-variables '(epg-gpg-program  "/opt/homebrew/bin/gpg")))
 
 ;;; Gnus
 

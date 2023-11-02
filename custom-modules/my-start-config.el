@@ -84,8 +84,10 @@
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize)))
 
+
 ;; ensure we have all modifiers available
 (my/with-system darwin
+  (setenv "GPG_AGENT_INFO" nil)
   (setq mac-command-modifier       'meta
         mac-option-modifier        'super
         mac-control-modifier       'control
