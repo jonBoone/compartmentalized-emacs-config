@@ -77,6 +77,11 @@
 (crafted-package-install-selected-packages)
 (require 'custom-term-config)
 
+;;; custom-gnus module
+(require 'custom-gnus-packages)
+(crafted-package-install-selected-packages)
+(require 'custom-gnus-config)
+
 ;;; crafted-writing module
 (require 'crafted-writing-packages)
 (crafted-package-install-selected-packages)
