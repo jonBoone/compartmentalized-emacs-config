@@ -25,7 +25,7 @@
   ;; (remove-hook 'dape-on-start-hooks 'dape-repl)
 
   ;; By default dape uses gdb keybinding prefix
-  (setq dape-key-prefix "C-x C-a")
+  (setq dape-key-prefix (kbd "C-x C-a"))
 
   ;; Use n for next etc. in REPL
   (setq dape-repl-use-shorthand t)
@@ -40,9 +40,9 @@
 (use-package magit
   :straight t
   :bind
-  (("C-M-;" . magit-status)
+  (((kbd "C-M-;") . magit-status)
    :map project-prefix-map
-   ("m" . project-magit))
+   ((kbd "m") . project-magit))
   :commands
   (magit-status magit-get-current-branch project-magit)
   :config
@@ -93,8 +93,8 @@
   :hook
   ((c++-mode c-mode java-mode javascript-mode go-mode nroff-mode) . generic-compiler)
   :bind
-  (("C-x M-m" . compile)
-   ("C-x C-m" . recompile))
+  (((kbd "C-x M-m") . compile)
+   ((kbd "C-x C-m") . recompile))
 
   :init
   (defun has-makefile-p ()
@@ -119,8 +119,8 @@
 (use-package expand-region
   :straight t
   :bind
-  (("M-[" . er/expand-region)
-   ("C-(" . er/mark-outside-pairs)))
+  (((kbd "M-[") . er/expand-region)
+   ((kbd "C-(") . er/mark-outside-pairs)))
 
 ;; colorize nested parentheses and brackets according to their nesting depth
 (use-package rainbow-delimiters

@@ -24,10 +24,10 @@
   :init
   (setq vterm-always-compile-module t)
   :bind
-  (("C-x t" . vterm)
+  (((kbd "C-x t") . vterm)
    :map vterm-mode-map
-   ("M-p" . vterm-send-up)
-   ("M-n" . vterm-send-down))
+   ((kbd "M-p") . vterm-send-up)
+   ((kbd "M-n") . vterm-send-down))
   :commands vterm
   :config
   (setq vterm-shell           "zsh"

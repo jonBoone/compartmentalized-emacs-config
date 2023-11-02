@@ -21,7 +21,10 @@
 ;; remember the last cursor location of opened files
 (save-place-mode 1)
 
-;; leverage flyspell package
+;; Unset "C-z" (suspend-frame)
+(global-unset-key (kbd "C-z"))
+
+;; flyspell package
 (use-package flyspell
   :straight t
   :hook (text-mode . flyspell-mode)
