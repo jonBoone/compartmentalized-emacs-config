@@ -18,7 +18,6 @@
 (add-to-list 'package-selected-packages 'org-bullets)
 (add-to-list 'package-selected-packages 'org-caldav)
 (add-to-list 'package-selected-packages 'org-roam)
-(add-to-list 'package-selected-packages 'org-tempo)
 
 (provide 'custom-org-packages)
 ;;; custom-org-packages.el ends here
