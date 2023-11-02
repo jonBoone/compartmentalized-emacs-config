@@ -40,9 +40,9 @@
 (use-package magit
   :straight t
   :bind
-  (((kbd "C-M-;") . magit-status)
+  (("C-M-;" . magit-status)
    :map project-prefix-map
-   ((kbd "m") . project-magit))
+   ("m" . project-magit))
   :commands
   (magit-status magit-get-current-branch project-magit)
   :config
@@ -93,8 +93,8 @@
   :hook
   ((c++-mode c-mode java-mode javascript-mode go-mode nroff-mode) . generic-compiler)
   :bind
-  (((kbd "C-x M-m") . compile)
-   ((kbd "C-x C-m") . recompile))
+  (("C-x M-m" . compile)
+   ("C-x C-m" . recompile))
 
   :init
   (defun has-makefile-p ()
@@ -119,8 +119,8 @@
 (use-package expand-region
   :straight t
   :bind
-  (((kbd "M-[") . er/expand-region)
-   ((kbd "C-(") . er/mark-outside-pairs)))
+  (("M-[" . er/expand-region)
+   ("C-(" . er/mark-outside-pairs)))
 
 ;; colorize nested parentheses and brackets according to their nesting depth
 (use-package rainbow-delimiters

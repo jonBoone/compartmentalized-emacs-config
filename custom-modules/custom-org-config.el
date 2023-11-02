@@ -48,10 +48,10 @@
   :straight t
   :bind
   (:map org-roam-mode-map
-        ((kbd "C-c n l")  . org-roam-buffer-toggle)
-        ((kbd "C-c n d")  . org-roam-dailies-find-date)
-        ((kbd "C-c n f")  . org-roam-find-file)
-        ((kbd "C-c n i")  . org-roam-node-insert))
+        ("C-c n l"  . org-roam-buffer-toggle)
+        ("C-c n d"  . org-roam-dailies-find-date)
+        ("C-c n f"  . org-roam-find-file)
+        ("C-c n i"  . org-roam-node-insert))
 
   :config
   (setq org-roam-directory                  "~/Dropbox/pkb/org"

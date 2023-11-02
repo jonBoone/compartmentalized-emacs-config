@@ -20,10 +20,10 @@
   (keymap-global-set "<remap> <describe-key>"            #'helpful-key)
   (keymap-global-set "<remap> <describe-symbol>"         #'helpful-symbol)
   (keymap-global-set "<remap> <describe-variable>"       #'helpful-variable)
-  (keymap-global-set (kbd "C-h F")                       #'helpful-function))
+  (keymap-global-set "C-h F"                             #'helpful-function))
 
 ;; Bind extra `describe-*' commands
-(keymap-global-set (kbd "C-h K") #'describe-keymap)
+(keymap-global-set "C-h K" #'describe-keymap)
 
 ;;;; Line Numbers
 (defcustom crafted-ui-line-numbers-enabled-modes
@@ -232,9 +232,9 @@ Used as hook for modes which should not display line numebrs."
 (use-package popper
   :straight t
   :bind
-  (((kbd "M-`")      . popper-toggle)
-   ((kbd "M-~")      . popper-cycle)
-   ((kbd "C-x M-`")  . popper-toggle-type))
+  (("M-`"      . popper-toggle)
+   ("M-~"      . popper-cycle)
+   ("C-x M-`"  . popper-toggle-type))
   :config
   (setq popper-reference-buffers '(("\\*Messages\\*"             . hide)
                                    ("\\*Warnings\\*"             . hide)
@@ -258,8 +258,8 @@ Used as hook for modes which should not display line numebrs."
 (use-package winner
   :straight nil
   :bind
-  (((kbd "s-/") . winner-undo)
-   ((kbd "s-?") . winner-redo))
+  (("s-/" . winner-undo)
+   ("s-?" . winner-redo))
   :config
   (winner-mode))
 
