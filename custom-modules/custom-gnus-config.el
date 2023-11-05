@@ -29,8 +29,6 @@
 (defun gnus-user-format-function-d (header)
   ;; Print out date in yyyy-mm-dd hh:mm:ss
   (format-time-string "%Y-%m-%d %T" (gnus-date-get-time (mail-header-date header))))
-
-
 (use-package gnus
   :defer t
   :config
