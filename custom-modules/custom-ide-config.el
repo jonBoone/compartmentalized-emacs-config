@@ -7,6 +7,12 @@
 
 ;;; Commentary:
 
+;; add completion-at-point function for language keywords
+(add-to-list 'completion-at-point-functions #'cape-keyword)
+
+;; configure eglot
+(crafted-ide--add-eglot-hooks '(#'prog-mode))
+
 ;; configure tree-sitter
 ;;(crafted-ide-configure-tree-sitter)
 
@@ -121,6 +127,12 @@
   :bind
   (("M-[" . er/expand-region)
    ("C-(" . er/mark-outside-pairs)))
+
+;; add leetcode support
+(use-package leetcode
+  :straight t
+  :config
+  (setq leetcode-language "python3"))
 
 ;; colorize nested parentheses and brackets according to their nesting depth
 (use-package rainbow-delimiters

@@ -15,6 +15,7 @@
 (add-to-list 'package-selected-packages 'expand-region)
 (add-to-list 'package-selected-packages 'forge)
 (add-to-list 'package-selected-packages 'git-link)
+(add-to-list 'package-selected-packages 'leetcode)
 (add-to-list 'package-selected-packages 'magit)
 (add-to-list 'package-selected-packages 'magit-todos)
 (add-to-list 'package-selected-packages 'rainbow-delimiters)
