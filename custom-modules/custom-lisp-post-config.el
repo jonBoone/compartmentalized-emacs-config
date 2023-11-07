@@ -7,29 +7,11 @@
 
 ;;; Commentary:
 
-;; use lispy package
-(use-package lispy
-  :straight t
-  :hook (emacs-lisp-mode lisp-mode scheme-mode))
 
-;; use parinfer for lisp languages
-(use-package parinfer
-  :hook
-  (clojure-mode emacs-lisp-mode common-lisp-mode scheme-mode lisp-mode)
-  :config
-  (setq parinfer-extensions
-        '(defaults      ; should be included
-          pretty-parens ; different paren styles for different modes
-          smart-tab     ; C-b & C-f jump positions and smart shift with tab & S-tab
-          smart-yank))) ; Yank behavior depends on mode
-
-;; use smartparens
-(use-package smartparens
-  :straight t
-  :hook prog-mode)
+;; add completion-at-point function for language keywords
+(add-to-list 'completion-at-point-functions #'cape-symbol)
 
 ;; sly post-config
-
 ;; keymap bindings
 (eval-after-load 'sly
   '(define-key sly-prefix-map (kbd "M-h") 'sly-documentation-lookup))
