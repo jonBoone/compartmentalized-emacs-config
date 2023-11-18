@@ -208,8 +208,8 @@ Used as hook for modes which should not display line numebrs."
   :straight t
   :hook (after-init . doom-modeline-mode)
   :custom-face
-  (mode-line           ((t (:height 0.90))))
-  (mode-line-inactive  ((t (:height 0.85))))
+  (mode-line           ((t (:height 0.95))))
+  (mode-line-inactive  ((t (:height 0.90))))
   :init
   (doom-modeline-mode 1)
   :config
