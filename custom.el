@@ -24,7 +24,7 @@
  '(ibuffer-old-time 24)
  '(inferior-lisp-program "sbcl")
  '(kill-do-not-save-duplicates t)
- '(load-prefer-newer t t)
+ '(load-prefer-newer t)
  '(marginalia-annotators
    '(marginalia-annotators-heavy marginalia-annotators-light nil) t)
  '(mouse-wheel-progressive-speed nil)
@@ -49,6 +49,7 @@
  '(tabspaces-remove-to-default t)
  '(tabspaces-use-filtered-buffers-as-default t)
  '(vertico-cycle t)
+ '(warning-suppress-types '((use-package)))
  '(whitespace-action '(cleanup auto-cleanup))
  '(whitespace-style '(face empty trailing tab-mark indentation::space))
  '(xref-show-definitions-function 'xref-show-definitions-completing-read t))
