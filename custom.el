@@ -24,12 +24,15 @@
  '(ibuffer-old-time 24)
  '(inferior-lisp-program "sbcl")
  '(kill-do-not-save-duplicates t)
- '(load-prefer-newer t)
+ '(load-prefer-newer t t)
  '(marginalia-annotators
    '(marginalia-annotators-heavy marginalia-annotators-light nil) t)
  '(mouse-wheel-progressive-speed nil)
  '(numpydoc-insert-examples-block nil)
  '(numpydoc-template-long nil)
+ '(org-agenda-files
+   '("/Users/iain/Dropbox/pkb/org/main/2019_atx_midtower_build.org" "/Users/iain/Dropbox/pkb/org/main/2023_miniatx_midtower_build.org" "/Users/iain/Dropbox/pkb/org/main/security_skill_sets_to_add.org" "/Users/iain/Dropbox/pkb/org/main/sliding_window.org" "/Users/iain/Dropbox/pkb/org/projects/home-lab/proxmox/2023-07-04-hardware-configuration.org" "/Users/iain/Dropbox/pkb/org/projects/home-lab/proxmox/worklog.org" "/Users/iain/Dropbox/pkb/org/projects/open-source/common-lisp/cmucl/worklog.org" "/Users/iain/Dropbox/pkb/org/projects/org-mode/worklog.org" "/Users/iain/Dropbox/pkb/org/active.org" "/Users/iain/Dropbox/pkb/org/future.org" "/Users/iain/Dropbox/pkb/org/gtd.org" "/Users/iain/Dropbox/pkb/org/inbox.org" "/Users/iain/Dropbox/pkb/org/projects.org"))
+ '(org-directory "/Users/iain/Dropbox/pkb/org/")
  '(org-hide-emphasis-markers t)
  '(org-link-descriptive t)
  '(org-mouse-1-follows-link t)
