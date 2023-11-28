@@ -112,7 +112,7 @@
                                                   ("idea" . ?i))
         org-todo-keywords                       '((sequence
                                                    "FUTURE(f)" "ACTIVE(a)"
-                                                   "|" "COMPLETED(c!)" "CANCELLED(k@)"
+                                                   "|" "COMPLETED(c!)" "CANCELED(k@)"
                                                    "DEFERRED(f)")
                                                   (sequence "MEET(m)" "|" "MET(M)"))
         org-agenda-custom-commands              '(("d" "Dashboard"
