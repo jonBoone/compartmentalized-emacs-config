@@ -39,6 +39,12 @@
 ;;; crafted-init-config
 (require 'crafted-init-config)
 
+;; workspace configurations
+(require 'custom-workspaces-packages)
+(package-install-selected-packages)
+(require 'custom-workspaces-config)
+
+
 ;; keybinding libraries module
 (require 'keybinding-libraries-packages)
 (crafted-package-install-selected-packages)
