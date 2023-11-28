@@ -11,21 +11,6 @@
 
 ;;; Code:
 
-;; Return or left-click with mouse follows link
-(customize-set-variable 'org-return-follows-link t)
-(customize-set-variable 'org-mouse-1-follows-link t)
-
-;; Display links as the description provided
-(customize-set-variable 'org-link-descriptive t)
-
-;; Visually indent org-mode files to a given header level
-(add-hook 'org-mode-hook #'org-indent-mode)
-
-;; Hide markup markers
-(customize-set-variable 'org-hide-emphasis-markers t)
-(when (locate-library "org-appear")
-  (add-hook 'org-mode-hook 'org-appear-mode))
-
 ;; Disable auto-pairing of "<" in org-mode with electric-pair-mode
 (defun custom-org-enhance-electric-pair-inhibit-predicate ()
   "Disable auto-pairing of \"<\" in `org-mode' when using `electric-pair-mode'."
@@ -42,6 +27,18 @@
 (add-hook 'electric-pair-mode-hook #'custom-org-enhance-electric-pair-inhibit-predicate)
 (add-hook 'org-mode-hook #'custom-org-enhance-electric-pair-inhibit-predicate)
 
+;;; org-mode support
+(use-package org
+  :straight t
+  :hook 'org-indent-mode
+  :config
+  ;; Return or left-click with mouse follows link
+  (customize-set-variable 'org-return-follows-link t) ; return follows link
+  (customize-set-variable 'org-mouse-1-follows-link t) ; left-click follows link
+  (customize-set-variable 'org-link-descriptive t) ; Display link description
+  (customize-set-variable 'org-hide-emphasis-markers t) ; hide markup markers
+  (when (locate-library "org-appear")
+    (add-hook 'org-mode-hook 'org-appear-mode)))
 
 ;;; Org-Roam Support
 (use-package org-roam
@@ -81,31 +78,31 @@
         org-roam-dailies-capture-templates  '(("d" "default" entry
                                                #'org-roam-capture--get-point
                                                "* %?"
-                                               :file-name "Journal/%<%Y-%m-%d>"
+                                               :file-name "journal/%<%Y-%m-%d>"
                                                :head "#+title: %<%Y-%m-%d %a>\n\n[[roam:%<%Y-%B>]]\n\n")
                                               ("t" "Task" entry
                                                #'org-roam-capture--get-point
                                                "* FUTURE %?\n  %U\n  %a\n  %i"
-                                               :file-name "Journal/%<%Y-%m-%d>"
+                                               :file-name "journal/%<%Y-%m-%d>"
                                                :olp ("Tasks")
                                                :empty-lines 1
                                                :head "#+title: %<%Y-%m-%d %a>\n\n[[roam:%<%Y-%B>]]\n\n")
                                               ("j" "journal" entry
                                                #'org-roam-capture--get-point
                                                "* %<%I:%M %p> - Journal  :journal:\n\n%?\n\n"
-                                               :file-name "Journal/%<%Y-%m-%d>"
+                                               :file-name "journal/%<%Y-%m-%d>"
                                                :olp ("Log")
                                                :head "#+title: %<%Y-%m-%d %a>\n\n[[roam:%<%Y-%B>]]\n\n")
                                               ("l" "log entry" entry
                                                #'org-roam-capture--get-point
                                                "* %<%I:%M %p> - %?"
-                                               :file-name "Journal/%<%Y-%m-%d>"
+                                               :file-name "journal/%<%Y-%m-%d>"
                                                :olp ("Log")
                                                f:head "#+title: %<%Y-%m-%d %a>\n\n[[roam:%<%Y-%B>]]\n\n")
                                               ("m" "meeting" entry
                                                #'org-roam-capture--get-point
                                                "* %<%I:%M %p> - %^{Meeting Title}  :meetings:\n\n%?\n\n"
-                                               :file-name "Journal/%<%Y-%m-%d>"
+                                               :file-name "journal/%<%Y-%m-%d>"
                                                :olp ("Log")
                                                :head "#+title: %<%Y-%m-%d %a>\n\n[[roam:%<%Y-%B>]]\n\n"))
         org-roam-dailies-directory          "journal/")
