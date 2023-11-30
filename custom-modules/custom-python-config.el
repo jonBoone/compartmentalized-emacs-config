@@ -47,9 +47,9 @@
 ;;; python mode
 (use-package python-mode
   :straight (:type git)
-  :hook (python-mode . eglot-ensure)
   :init
   (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+  (crafted-ide--add-eglot-hooks '(#'python-mode))
   :config
   (setq python-flymake-command                     '("flake8" "-")
         python-indent-trigger-commands             '(yas-expand)

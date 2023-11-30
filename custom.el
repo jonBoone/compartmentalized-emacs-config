@@ -55,7 +55,7 @@
  '(warning-suppress-types '((use-package)))
  '(whitespace-action '(cleanup auto-cleanup))
  '(whitespace-style '(face empty trailing tab-mark indentation::space))
- '(xref-show-definitions-function 'xref-show-definitions-completing-read t))
+ '(xref-show-definitions-function 'xref-show-definitions-completing-read))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
