@@ -8,6 +8,7 @@
 ;;; Commentary:
 
 ;;; Code
+;(add-to-list 'package-selected-packages 'advent)
 (add-to-list 'package-selected-packages 'ansi-color)
 (add-to-list 'package-selected-packages 'compile)
 (add-to-list 'package-selected-packages 'diff-hl)

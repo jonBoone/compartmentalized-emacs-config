@@ -128,6 +128,14 @@
   (("M-[" . er/expand-region)
    ("C-(" . er/mark-outside-pairs)))
 
+;; add advent of code support
+;; (use-package advent
+;;   :straight t
+;;   :config
+;;   (setq advent-dir          (expand-file-name "~/src/github.com/jonBoone/advent-of-code")
+;;         advent-src-template (expand-file-name "~/src/github.com/jonBoone/advent-of-code/template/main.py")))
+
+
 ;; add leetcode support
 (use-package leetcode
   :straight t
