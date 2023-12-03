@@ -9,7 +9,7 @@
 
 ;; I want configure use-package to leverage straight
 (setq use-package-always-ensure nil    ; avoid forcing the use of package.el
-      use-package-verbose       'debug)
+      use-package-verbose       nil)
 
 ;; add package sources if they are not already present
 (unless (assoc-default "melpa" package-archives)
@@ -26,12 +26,13 @@
 ;; leverage 'use-package to setup straight!
 (use-package straight
   :custom
-  (straight-host-usernames          '((github . "jonBoone")))
-  (straight-vc-git-default-protocol 'ssh)
-  (straight-use-package-by-default  t)
+  (straight-host-usernames             '((github . "jonBoone")))
+  (striaght-vc-git-default-clone-depth '(1 single-branch))
+  (straight-vc-git-default-protocol    'ssh)
+  (straight-use-package-by-default     t)
   ;; ensure we pull the latest org-mode related packages by pre-registering them
-  (straight-register-package 'org)
-  (straight-register-package 'org-contrib))
+  (straight-register-package           'org)
+  (straight-register-package           'org-contrib))
 
 ;; change the association of "python-mode" with python-mode.el rather than python.el
 (autoload 'python-mode "python-mode" "Python Mode." t)
