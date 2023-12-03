@@ -41,9 +41,8 @@
 
 ;; workspace configurations
 (require 'custom-workspaces-packages)
-(package-install-selected-packages)
+(crafted-package-install-selected-packages)
 (require 'custom-workspaces-config)
-
 
 ;; keybinding libraries module
 (require 'keybinding-libraries-packages)
@@ -77,6 +76,9 @@
 (require 'crafted-completion-packages)
 (crafted-package-install-selected-packages)
 (require 'crafted-completion-config)
+
+;;; custom-browser module
+(require 'custom-browser-config)
 
 ;;; custom-term module
 (require 'custom-term-packages)
