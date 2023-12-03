@@ -9,6 +9,7 @@
 
 
 (use-package xwwp-full
+  :straight (xwwp-full :host github :repo "kchanqvq/xwwp")
   :bind
   (:map xwidget-webkit-mode-map
         ("<localleader>b" . 'xwidget-webkit-back)
