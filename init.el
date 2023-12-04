@@ -17,8 +17,6 @@
 ;;;; modules
 
 ;;; leverage my-start module
-(require 'my-start-packages)
-(crafted-package-install-selected-packages)
 (require 'my-start-config)
 
 ;;; leverage my-font module
