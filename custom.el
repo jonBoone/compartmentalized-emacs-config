@@ -12,6 +12,8 @@
  '(corfu-auto t)
  '(corfu-auto-prefix 2)
  '(corfu-cycle t)
+ '(custom-safe-themes
+   '("2b501400e19b1dd09d8b3708cefcb5227fda580754051a24e8abf3aff0601f87" default))
  '(dired-auto-revert-buffer t)
  '(dired-dwim-target t)
  '(ediff-window-setup-function 'ediff-setup-windows-plain t)
@@ -31,7 +33,7 @@
  '(numpydoc-insert-examples-block nil)
  '(numpydoc-template-long nil)
  '(org-agenda-files
-   '("/Users/iain/Dropbox/pkb/org/main/2019_atx_midtower_build.org" "/Users/iain/Dropbox/pkb/org/main/2023_miniatx_midtower_build.org" "/Users/iain/Dropbox/pkb/org/main/security_skill_sets_to_add.org" "/Users/iain/Dropbox/pkb/org/main/sliding_window.org" "/Users/iain/Dropbox/pkb/org/projects/home-lab/proxmox/2023-07-04-hardware-configuration.org" "/Users/iain/Dropbox/pkb/org/projects/home-lab/proxmox/worklog.org" "/Users/iain/Dropbox/pkb/org/projects/open-source/common-lisp/cmucl/worklog.org" "/Users/iain/Dropbox/pkb/org/projects/org-mode/worklog.org" "/Users/iain/Dropbox/pkb/org/active.org" "/Users/iain/Dropbox/pkb/org/future.org" "/Users/iain/Dropbox/pkb/org/gtd.org" "/Users/iain/Dropbox/pkb/org/inbox.org" "/Users/iain/Dropbox/pkb/org/projects.org"))
+   '("/Users/iain/Dropbox/pkb/org/main/2019_atx_midtower_build.org" "/Users/iain/Dropbox/pkb/org/main/2023_miniatx_midtower_build.org" "/Users/iain/Dropbox/pkb/org/main/security_skill_sets_to_add.org" "/Users/iain/Dropbox/pkb/org/main/sliding_window.org" "/Users/iain/Dropbox/pkb/org/projects/home-lab/network/2024-01-08-design.org" "/Users/iain/Dropbox/pkb/org/projects/home-lab/proxmox/2023-07-04-hardware-configuration.org" "/Users/iain/Dropbox/pkb/org/projects/home-lab/proxmox/worklog.org" "/Users/iain/Dropbox/pkb/org/projects/open-source/common-lisp/cmucl/worklog.org" "/Users/iain/Dropbox/pkb/org/projects/org-mode/worklog.org" "/Users/iain/Dropbox/pkb/org/2023-07-25-17-00-Take-Home-Assignment-Follow-Up-with-Robert-Smith.org" "/Users/iain/Dropbox/pkb/org/active.org" "/Users/iain/Dropbox/pkb/org/future.org" "/Users/iain/Dropbox/pkb/org/gtd.org" "/Users/iain/Dropbox/pkb/org/inbox.org" "/Users/iain/Dropbox/pkb/org/projects.org"))
  '(org-directory "/Users/iain/Dropbox/pkb/org/")
  '(org-hide-emphasis-markers t)
  '(org-link-descriptive t)
