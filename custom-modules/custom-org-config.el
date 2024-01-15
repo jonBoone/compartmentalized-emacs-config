@@ -39,10 +39,28 @@
   (customize-set-variable 'org-link-descriptive t) ; Display link description
   (customize-set-variable 'org-hide-emphasis-markers t) ; hide markup markers
   :hook
-  ((org-mode . org-indent-mode)
-   (org-mode . org-appear-mode))
+  ((org-mode                . org-indent-mode)
+   (org-mode                . org-appear-mode)
+   (org-babel-after-execute . org-redisplay-inline-images))
   :config
-  (setq org-agenda-block-separator              "━"
+  ;; configure org-babel languages
+  (with-eval-after-load 'org
+    (org-babel-do-load-languages
+     'org-babel-load-languages
+     '((dot        . t)
+       (emacs-lisp . t)
+       (latex      . t)
+       (plantuml   . t)
+       (python     . t)
+       (shell      . t)))
+    (mapcar #'(lambda (element)
+                (push element org-src-lang-modes))
+            '(("conf-unix"  . conf-unix)
+              ("plantuml"   . platnuml)
+              ("python"     . python)
+              ("shell"      . shell))))
+  (setq org-adapt-indentation                   t
+        org-agenda-block-separator              "━"
         org-agenda-breadcrumbs-separator        " ❱ "
         org-agenda-category-icon-alist          '(("Work"
                                                    ,(list
@@ -89,7 +107,22 @@
                                                   "┈┈┈┈┈┈┈┈┈┈┈┈┈┈")
         org-agenda-todo-ignore-with-date        t
         org-agenda-window-setup                 'current-window
+        org-cycle-separator-lines               2
         org-ellipsis                            " ▾"
+        org-edit-src-content-indentation        2
+        org-fontify-done-headline               t
+        org-fontify-quote-and-verse-blocks      t
+        org-fontify-whole-heading-line          t
+        org-format-latex-options                (plist-put org-format-latex-options :scale 1.5)
+        org-habit-graph-column                  60
+        org-hide-block-startup                  nil
+        org-hide-emphasis-markers               t
+        org-hide-leading-stars                  t
+        org-highlight-latex-and-related         '(native)
+        org-latex-create-formula-image-program  'dvisvgm
+        org-latex-default-class                 "tuffte-handout"
+        org-log-done                            'time
+        org-log-into-drawer                     t
         org-modules                             '(org-crypt
                                                   org-irc
                                                   org-habit
@@ -97,7 +130,14 @@
                                                   org-magit
                                                   org-notify
                                                   org-toc)
-        org-pretty-entities                       t
+        org-outline-path-complete-in-steps      nil
+        org-plantuml-jar-path                   (car
+                                                 (directory-files-recursively
+                                                  "/opt/homebrew/Cellar/plantuml"
+                                                  "plantuml.jar"))
+        org-pretty-entities                     t
+        org-src-fontify-natively                t
+        org-src-tab-acts-natively               t
         org-tag-alist                           '((:startgroup)
                                                   ;; Put mutually exclusive tags here
                                                   (:endgroup)
@@ -154,7 +194,11 @@
                                                          (org-mac-iCal))))))))))
 
 
-
+;; Org-Journal Support
+(use-package org-journal
+  :straight t
+  :bind (:map org-journal-mode-map
+              ("C-<tab>" . yas-expand)))
 
 ;;; Org-Roam Support
 (use-package org-roam
