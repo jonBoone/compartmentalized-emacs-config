@@ -8,9 +8,6 @@
 ;;; Commentary:
 
 
-;; add completion-at-point function for language keywords
-(add-to-list 'completion-at-point-functions #'cape-symbol)
-
 ;; sly post-config
 ;; keymap bindings
 (eval-after-load 'sly
