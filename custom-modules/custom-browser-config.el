@@ -7,6 +7,8 @@
 
 ;;; Commentary:
 
+(use-package ctable
+  :straight t)
 
 (use-package xwwp-full
   :straight (xwwp-full :host github :repo "kchanqvq/xwwp")
