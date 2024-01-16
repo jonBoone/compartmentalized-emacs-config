@@ -46,8 +46,8 @@
   "This is where to find the sly-customized core file.")
 
 (setq sly-contribs             '(sly-fancy sly-retro sly-trace-dialog)
-      sly-lisp-implementations '((sbcl-latest ("sbcl" "--core"
-                                               ,sbcl-latest-sly-core-file))
+      sly-lisp-implementations `((sbcl-latest ("sbcl" "--core"
+                                               ,Sbcl-latest-sly-core-file))
                                  (cmucl-latest ("lisp")))
       sly-net-coding-system 'utf-8-unix)
 
