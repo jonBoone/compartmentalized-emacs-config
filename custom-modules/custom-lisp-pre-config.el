@@ -47,7 +47,7 @@
 
 (setq sly-contribs             '(sly-fancy sly-retro sly-trace-dialog)
       sly-lisp-implementations `((sbcl-latest ("sbcl" "--core"
-                                               ,Sbcl-latest-sly-core-file))
+                                               ,sbcl-latest-sly-core-file))
                                  (cmucl-latest ("lisp")))
       sly-net-coding-system 'utf-8-unix)
 
