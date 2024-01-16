@@ -17,7 +17,7 @@
  '(dired-auto-revert-buffer t)
  '(dired-dwim-target t)
  '(ediff-window-setup-function 'ediff-setup-windows-plain t)
- '(eglot-autoshutdown t t)
+ '(eglot-autoshutdown t)
  '(epg-gpg-program "/opt/homebrew/bin/gpg")
  '(eshell-scroll-to-bottom-on-input 'this t)
  '(fast-but-imprecise-scrolling t)
