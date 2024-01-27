@@ -10,6 +10,13 @@
 (use-package ctable
   :straight t)
 
+
+(use-package browse-url
+  :straight t
+  :init
+  (customize-set-value browse-url-browser-function 'xwidget-webkit-browse-url))
+
+
 (use-package xwwp-full
   :straight (xwwp-full :host github :repo "kchanqvq/xwwp")
   :bind

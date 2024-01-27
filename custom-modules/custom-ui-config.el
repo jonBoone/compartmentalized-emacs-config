@@ -108,7 +108,7 @@ Used as hook for modes which should not display line numebrs."
 (use-package doom-themes
   :straight t
   :init
-  (load-theme 'leuven t)             ; consider whiteboard theme
+  (load-theme 'doom-nord-theme t)
   (doom-themes-visual-bell-config))
 
 ;; customize truncation indicators and add breathing room at the edge of the window
