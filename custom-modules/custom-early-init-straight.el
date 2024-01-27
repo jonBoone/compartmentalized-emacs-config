@@ -10,7 +10,7 @@
 
 ;;; Code:
 
-(load (expand-file-name "modules/crafted-package-config" crafted-emacs-home))
+(load (expand-file-name "custom-modules/custom-package-config" custom-modules))
 
 ;; See https://github.com/radian-software/straight.el#getting-started
 (defvar bootstrap-version)
@@ -28,9 +28,9 @@
 
 ;; Configure crafted-emacs to use straight as package manager.
 ;; See `(info "(crafted-emacs)Using alternate package managers")'
-(setq crafted-package-system 'straight)
-(setq crafted-package-installer #'straight-use-package)
-(setq crafted-package-installed-predicate #'straight--installed-p)
+(setq custom-package-system 'straight)
+(setq custom-package-installer #'straight-use-package)
+(setq custom-package-installed-predicate #'straight--installed-p)
 
 (provide 'custom-early-init-straight)
 ;; END custom-early-init-straight.el
