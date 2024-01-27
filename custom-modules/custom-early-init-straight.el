@@ -10,7 +10,7 @@
 
 ;;; Code:
 
-(load (expand-file-name "custom-modules/custom-package-config" custom-modules))
+(load (expand-file-name "custom-modules/custom-package-config"))
 
 ;; See https://github.com/radian-software/straight.el#getting-started
 (defvar bootstrap-version)
