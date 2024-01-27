@@ -10,7 +10,7 @@
 
 ;;; Code:
 
-(load (expand-file-name "compartmentalized-package-config" modules))
+(load (expand-file-name "compartmentalized-package-config" compartmentalized-modules))
 
 ;; See https://github.com/radian-software/straight.el#getting-started
 (defvar bootstrap-version)
