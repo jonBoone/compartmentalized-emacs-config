@@ -58,7 +58,7 @@
 (add-to-list 'load-path custom-modules)
 
 
-(require 'custom-early-init-straight)
+(require 'compartmentalized-early-init-straight)
 (require 'compartmentalized-package-config)
 (require 'custom-straight-packages)
 (compartmentalized-package-install-selected-packages)
