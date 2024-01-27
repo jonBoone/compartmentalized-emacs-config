@@ -59,9 +59,9 @@
 
 
 (require 'custom-early-init-straight)
-;; (require 'crafted-package-config)
-;; (require 'custom-straight-packages)
-;; (crafted-package-install-selected-packages)
+(require 'compartmentalized-package-config)
+(require 'custom-straight-packages)
+(compartmentalized-package-install-selected-packages)
 (require 'custom-straight-config)
 
 (provide 'early-init)
