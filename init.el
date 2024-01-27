@@ -16,6 +16,9 @@
 
 ;;;; modules
 
+;;; compartmentalized-init-config
+(require 'compartmentalized-init-config)
+
 ;;; leverage my-start module
 (require 'my-start-config)
 
@@ -32,8 +35,6 @@
 (crafted-package-install-selected-packages)
 (require 'optimized-performance-config)
 
-;;; compartmentalized-init-config
-(require 'compartmentalized-init-config)
 
 ;; workspace configurations
 (require 'custom-workspaces-packages)
