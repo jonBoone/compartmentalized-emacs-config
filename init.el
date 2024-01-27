@@ -57,7 +57,7 @@
 (require 'custom-org-config)
 
 ;;; crafted-defaults - the General Crafted Emacs endorsed defaults
-(require 'crafted-defaults-config)
+(require 'compartmentalized-defaults-config)
 
 ;;; leverage my-files module
 (require 'my-files-packages)
