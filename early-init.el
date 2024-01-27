@@ -55,7 +55,8 @@
 (setq custom-modules (expand-file-name "custom-modules/" user-emacs-directory))
 (add-to-list 'load-path custom-modules)
 
-;; (require 'crafted-early-init-straight)
+
+(require 'custom-early-init-straight)
 ;; (require 'crafted-package-config)
 ;; (require 'custom-straight-packages)
 ;; (crafted-package-install-selected-packages)
