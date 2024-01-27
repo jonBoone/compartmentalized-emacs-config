@@ -52,6 +52,8 @@
 (setq load-path (cl-remove "org$" load-path :test 'string-match-p))
 
 ;; load the straight support module and dependencies
+(setq compartmentalized-modules (expand-file-name "modules/" user-emacs-directory))
+(add-to-list 'load-path compartmentalized-modules)
 (setq custom-modules (expand-file-name "custom-modules/" user-emacs-directory))
 (add-to-list 'load-path custom-modules)
 
