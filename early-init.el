@@ -52,17 +52,17 @@
 (setq load-path (cl-remove "org$" load-path :test 'string-match-p))
 
 ;; load the straight support module and dependencies
-(setq crafted-emacs-home "~/.config/emacs/crafted-emacs/")
-(add-to-list 'load-path crafted-emacs-home)
-(setq crafted-emacs-modules (expand-file-name "modules/" crafted-emacs-home))
-(add-to-list 'load-path crafted-emacs-modules)
+;; (setq crafted-emacs-home "~/.config/emacs/crafted-emacs/")
+;; (add-to-list 'load-path crafted-emacs-home)
+;; (setq crafted-emacs-modules (expand-file-name "modules/" crafted-emacs-home))
+;; (add-to-list 'load-path crafted-emacs-modules)
 (setq custom-modules (expand-file-name "custom-modules/" user-emacs-directory))
 (add-to-list 'load-path custom-modules)
 
-(require 'crafted-early-init-straight)
-(require 'crafted-package-config)
-(require 'custom-straight-packages)
-(crafted-package-install-selected-packages)
+;; (require 'crafted-early-init-straight)
+;; (require 'crafted-package-config)
+;; (require 'custom-straight-packages)
+;; (crafted-package-install-selected-packages)
 (require 'custom-straight-config)
 
 (provide 'early-init)
