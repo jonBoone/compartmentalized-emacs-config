@@ -32,8 +32,8 @@
 (crafted-package-install-selected-packages)
 (require 'optimized-performance-config)
 
-;;; crafted-init-config
-(require 'crafted-init-config)
+;;; compartmentalized-init-config
+(require 'compartmentalized-init-config)
 
 ;; workspace configurations
 (require 'custom-workspaces-packages)
