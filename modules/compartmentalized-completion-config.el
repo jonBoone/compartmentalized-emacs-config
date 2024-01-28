@@ -1,4 +1,4 @@
-x;;; compartmentalized-completion-config.el --- Compartmentalized Completion Configuration -*- lexical-binding: t; -*-
+;;; compartmentalized-completion-config.el --- Compartmentalized Completion Configuration -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023
 ;; SPDX-License-Identifier: MIT
