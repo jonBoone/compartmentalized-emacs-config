@@ -87,20 +87,20 @@
 (compartmentalized-package-install-selected-packages)
 (require 'custom-gnus-config)
 
-;;; crafted-writing module
-(require 'crafted-writing-packages)
+;;; compartmentalized-writing module
+(require 'compartmentalized-writing-packages)
 (compartmentalized-package-install-selected-packages)
-(require 'crafted-writing-config)
+(require 'compartmentalized-writing-config)
 
 ;;; custom-writing module
 (require 'custom-writing-packages)
 (compartmentalized-package-install-selected-packages)
 (require 'custom-writing-config)
 
-;;; crafted-ide module
-(require 'crafted-ide-packages)
+;;; compartmentalized-ide module
+(require 'compartmentalized-ide-packages)
 (compartmentalized-package-install-selected-packages)
-(require 'crafted-ide-config)
+(require 'compartmentalized-ide-config)
 
 ;;; custom-ide module
 (require 'custom-ide-packages)
