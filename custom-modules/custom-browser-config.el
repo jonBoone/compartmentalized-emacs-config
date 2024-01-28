@@ -25,7 +25,8 @@
   (customize-set-value browse-url-browser-function
                        (lambda (url session)
                          (other-window 1)
-                         (xwidget-browse-url-no-reuse url))))
+                         (xwidget-browse-url-no-reuse url)))
+  (customize-set-value browse-url-default-scheme "https"))
 
 
 (use-package xwwp-full
