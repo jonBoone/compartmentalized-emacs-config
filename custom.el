@@ -17,8 +17,8 @@
  '(dired-auto-revert-buffer t)
  '(dired-dwim-target t)
  '(ediff-window-setup-function 'ediff-setup-windows-plain t)
- '(eglot-autoshutdown t t)
- '(epg-gpg-program "/opt/homebrew/bin/gpg" t)
+ '(eglot-autoshutdown t)
+ '(epg-gpg-program "/opt/homebrew/bin/gpg")
  '(eshell-scroll-to-bottom-on-input 'this t)
  '(fast-but-imprecise-scrolling t)
  '(global-auto-revert-non-file-buffers t)
@@ -57,7 +57,7 @@
  '(warning-suppress-types '((use-package)))
  '(whitespace-action '(cleanup auto-cleanup))
  '(whitespace-style '(face empty trailing tab-mark indentation::space))
- '(xref-show-definitions-function 'xref-show-definitions-completing-read t))
+ '(xref-show-definitions-function 'xref-show-definitions-completing-read))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
