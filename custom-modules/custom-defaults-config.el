@@ -48,5 +48,3 @@
 (provide 'custom-defaults-config)
 ;; END custom-defaults-config.el
 ;;
-
-;; custom-defaults-config.el ends here
