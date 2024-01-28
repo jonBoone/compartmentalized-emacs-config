@@ -108,11 +108,11 @@
 (require 'custom-ide-config)
 
 ;;; crafted-lisp and custom-lisp modules
-(require 'crafted-lisp-packages)
+(require 'compartmentalized-lisp-packages)
 (require 'custom-lisp-packages)
 (compartmentalized-package-install-selected-packages)
 (require 'custom-lisp-pre-config)
-(require 'crafted-lisp-config)
+(require 'compartmentalized-lisp-config)
 (require 'custom-lisp-post-config)
 
 ;;; custom-python module (resurrected from crafted-emacs/crafted-python-deprecated module)
