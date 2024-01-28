@@ -6,7 +6,7 @@
 ;; Author: System Crafters Community, Jon Boone <ipmonger@delamancha.org>
 ;; Keywords: python
 
-;;; Commentary: Revived from crafted-emacs/modules/deleted-packages/crafted-python-config-deprecated.el, with some modifications from me
+;;; Commentary: Revived from compartmentalized-emacs/modules/deleted-packages/compartmentalized-python-config-deprecated.el, with some modifications from me
 
 ;; Python development environment configuration.  Several python
 ;; packages can be installed with `pip'. Many of these are needed by
@@ -49,7 +49,7 @@
   :straight (:type git)
   :init
   (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-  (crafted-ide--add-eglot-hooks '(#'python-mode))
+  (compartmentalized-ide--add-eglot-hooks '(#'python-mode))
   :config
   (setq python-flymake-command                     '("flake8" "-")
         python-indent-trigger-commands             '(yas-expand)
