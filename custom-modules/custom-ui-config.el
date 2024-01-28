@@ -157,7 +157,7 @@ Used as hook for modes which should not display line numebrs."
 (global-display-line-numbers-mode t)
 
 ;; don't display line numbers for these modes
-(dolist (mode '(shell-mode-hook term-mode-hook vterm-mode-hook comint-mode-hook treemacs-mode-hook))
+(dolist (mode '(shell-mode-hook term-mode-hook vterm-mode-hook comint-mode-hook treemacs-mode-hook xwidget webkit))
   (add-hook mode 'compartmentalized-ui--disable-line-numbers-mode))
 
 ;; set the frame transparency
