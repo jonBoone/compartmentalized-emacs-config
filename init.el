@@ -70,9 +70,9 @@
 (require 'custom-ui-config)
 
 ;;; crafted-completion module
-(require 'crafted-completion-packages)
+(require 'compartmentalized-completion-packages)
 (compartmentalized-package-install-selected-packages)
-(require 'crafted-completion-config)
+(require 'compartmentalized-completion-config)
 
 ;;; custom-browser module
 (require 'custom-browser-config)

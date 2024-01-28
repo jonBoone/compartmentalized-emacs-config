@@ -68,11 +68,11 @@
 ;; Note: If you also use `compartmentalized-completion-config' and have `vertico'
 ;;       installed, all of these modes will be turned off in favour of
 ;;       `vertico'.
-(if (version< emacs-version "28")
-    (if (locate-library "icomplete-vertical")
-        (icomplete-vertical-mode 1)
-      (icomplete-mode 1))
-  (fido-vertical-mode 1))
+;;(if (version< emacs-version "28")
+;;    (if (locate-library "icomplete-vertical")
+;;        (icomplete-vertical-mode 1)
+;;      (icomplete-mode 1))
+;;  (fido-vertical-mode 1))
 
 ;; No matter which completion mode is used:
 (customize-set-variable 'tab-always-indent 'complete)
