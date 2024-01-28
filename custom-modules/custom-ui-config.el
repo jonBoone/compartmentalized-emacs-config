@@ -8,7 +8,7 @@
 ;;; Commentary:
 
 ;; Some of these settings are from the System Crafters Community
-;; crafted-emacs v2 crafted-ui-config.el file
+;; compartmentalized-emacs v2 compartmentalized-ui-config.el file
 
 ;;;; Help Buffers
 
@@ -26,62 +26,62 @@
 (keymap-global-set "C-h K" #'describe-keymap)
 
 ;;;; Line Numbers
-(defcustom crafted-ui-line-numbers-enabled-modes
+(defcustom compartmentalized-ui-line-numbers-enabled-modes
   '(conf-mode prog-mode)
   "Modes which should display line numbers."
   :type 'list
-  :group 'crafted-ui)
+  :group 'compartmentalized-ui)
 
-(defcustom crafted-ui-line-numbers-disabled-modes
-  '(org-mode)
+(defcustom compartmentalized-ui-line-numbers-disabled-modes
+  '(org-mode xwidget-webkit)
   "Modes which should not display line numbers.
 
 Modes derived from the modes defined in
-`crafted-ui-line-number-enabled-modes', but should not display line numbers."
+`compartmentalized-ui-line-number-enabled-modes', but should not display line numbers."
   :type 'list
-  :group 'crafted-ui)
+  :group 'compartmentalized-ui)
 
-(defun crafted-ui--enable-line-numbers-mode ()
+(defun compartmentalized-ui--enable-line-numbers-mode ()
   "Turn on line numbers mode.
 
 Used as hook for modes which should display line numbers."
   (display-line-numbers-mode 1))
 
-(defun crafted-ui--disable-line-numbers-mode ()
+(defun compartmentalized-ui--disable-line-numbers-mode ()
   "Turn off line numbers mode.
 
 Used as hook for modes which should not display line numebrs."
   (display-line-numbers-mode -1))
 
-(defun crafted-ui--update-line-numbers-display ()
+(defun compartmentalized-ui--update-line-numbers-display ()
   "Update configuration for line numbers display."
-  (if crafted-ui-display-line-numbers
+  (if compartmentalized-ui-display-line-numbers
       (progn
-        (dolist (mode crafted-ui-line-numbers-enabled-modes)
+        (dolist (mode compartmentalized-ui-line-numbers-enabled-modes)
           (add-hook (intern (format "%s-hook" mode))
-                    #'crafted-ui--enable-line-numbers-mode))
-        (dolist (mode crafted-ui-line-numbers-disabled-modes)
+                    #'compartmentalized-ui--enable-line-numbers-mode))
+        (dolist (mode compartmentalized-ui-line-numbers-disabled-modes)
           (add-hook (intern (format "%s-hook" mode))
-                    #'crafted-ui--disable-line-numbers-mode))
+                    #'compartmentalized-ui--disable-line-numbers-mode))
         (setq-default
          display-line-numbers-grow-only t
          display-line-numbers-type t
          display-line-numbers-width 2))
      (progn
-       (dolist (mode crafted-ui-line-numbers-enabled-modes)
+       (dolist (mode compartmentalized-ui-line-numbers-enabled-modes)
          (remove-hook (intern (format "%s-hook" mode))
-                      #'crafted-ui--enable-line-numbers-mode))
-       (dolist (mode crafted-ui-line-numbers-disabled-modes)
+                      #'compartmentalized-ui--enable-line-numbers-mode))
+       (dolist (mode compartmentalized-ui-line-numbers-disabled-modes)
          (remove-hook (intern (format "%s-hook" mode))
-                      #'crafted-ui--disable-line-numbers-mode)))))
+                      #'compartmentalized-ui--disable-line-numbers-mode)))))
 
-(defcustom crafted-ui-display-line-numbers nil
+(defcustom compartmentalized-ui-display-line-numbers nil
   "Whether line numbers should be enabled."
   :type 'boolean
-  :group 'crafted-ui
+  :group 'compartmentalized-ui
   :set (lambda (sym val)
          (set-default sym val)
-         (crafted-ui--update-line-numbers-display)))
+         (compartmentalized-ui--update-line-numbers-display)))
 
 ;;;; Elisp-Demos
 
@@ -158,7 +158,7 @@ Used as hook for modes which should not display line numebrs."
 
 ;; don't display line numbers for these modes
 (dolist (mode '(shell-mode-hook term-mode-hook vterm-mode-hook comint-mode-hook treemacs-mode-hook))
-  (add-hook mode 'crafted-ui--disable-line-numbers-mode))
+  (add-hook mode 'compartmentalized-ui--disable-line-numbers-mode))
 
 ;; set the frame transparency
 (add-to-list 'default-frame-alist `(alpha . ,my/frame-transparency))
