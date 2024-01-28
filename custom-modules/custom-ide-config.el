@@ -11,10 +11,10 @@
 (add-to-list 'completion-at-point-functions #'cape-keyword)
 
 ;; configure eglot
-(crafted-ide--add-eglot-hooks '(#'prog-mode))
+(compartmentalized-ide--add-eglot-hooks '(#'prog-mode))
 
 ;; configure tree-sitter
-;;(crafted-ide-configure-tree-sitter)
+;;(compartmentalized-ide-configure-tree-sitter)
 
 ;; configure dape for debugging adapters
 (use-package dape
