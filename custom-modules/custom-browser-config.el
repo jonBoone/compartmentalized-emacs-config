@@ -15,7 +15,7 @@
   :straight t
   :init
   ;; This function always opens a new website in a new window
-  (defun xwidget-browse-url-no-reuse (url &optional sessoin)
+  (defun xwidget-browse-url-no-reuse (url &optional session)
     (interactive (progn
                    (browse-url-interactive-arg "xwidget-webkit URL: ")))
     (xwidget-webkit-browse-url url t))
