@@ -16,7 +16,7 @@
    '("2b501400e19b1dd09d8b3708cefcb5227fda580754051a24e8abf3aff0601f87" default))
  '(dired-auto-revert-buffer t)
  '(dired-dwim-target t)
- '(ediff-window-setup-function 'ediff-setup-windows-plain t)
+ '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(eglot-autoshutdown t)
  '(epg-gpg-program "/opt/homebrew/bin/gpg")
  '(eshell-scroll-to-bottom-on-input 'this t)
@@ -26,7 +26,7 @@
  '(ibuffer-old-time 24)
  '(inferior-lisp-program "sbcl")
  '(kill-do-not-save-duplicates t)
- '(load-prefer-newer t t)
+ '(load-prefer-newer t)
  '(marginalia-annotators
    '(marginalia-annotators-heavy marginalia-annotators-light nil) t)
  '(mouse-wheel-progressive-speed nil)
@@ -57,7 +57,8 @@
  '(warning-suppress-types '((use-package)))
  '(whitespace-action '(cleanup auto-cleanup))
  '(whitespace-style '(face empty trailing tab-mark indentation::space))
- '(xref-show-definitions-function 'xref-show-definitions-completing-read))
+ '(xref-show-definitions-function 'xref-show-definitions-completing-read)
+ '(xwidget-webkit-enable-plugins t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
