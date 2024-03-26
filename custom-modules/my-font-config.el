@@ -12,8 +12,8 @@
 (defvar my/default-variable-font-size nil)
 
 (my/with-system darwin
-  (setq my/default-font-size          160
-        my/default-variable-font-size 160))
+  (setq my/default-font-size          280
+        my/default-variable-font-size 280))
 (my/with-system gnu/linux
   (setq my/default-font-size          240
         my/default-variable-font-size 240))
