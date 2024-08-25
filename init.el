@@ -125,6 +125,11 @@
 (compartmentalized-package-install-selected-packages)
 (require 'initial-buffers-config)
 
+;;; zippy the pinhead support
+(require 'my-yow)
+(compartmentalized-package-install-selected-packages)
+(require 'my-yow-config)
+
 (provide 'init)
 
 ;; END init.el

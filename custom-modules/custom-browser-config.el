@@ -22,6 +22,7 @@
   (defun browse-url-adjust-size-dispatch ()
     (when (equal major-mode 'xwidget-webkit-mode)
       (xwidget-webkit-adjust-size-dispatch)))
+  :config
   (customize-set-value browse-url-browser-function
                        (lambda (url session)
                          (other-window 1)

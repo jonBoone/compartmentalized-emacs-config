@@ -58,7 +58,8 @@
  '(whitespace-action '(cleanup auto-cleanup))
  '(whitespace-style '(face empty trailing tab-mark indentation::space))
  '(xref-show-definitions-function 'xref-show-definitions-completing-read)
- '(xwidget-webkit-enable-plugins t))
+ '(xwidget-webkit-enable-plugins t)
+ '(yow-file "/Users/iain/.local/share/etc/yow.lines"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
